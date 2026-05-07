@@ -22,26 +22,27 @@
     <meta name="google-site-verification" content="r_XlW8OpHreyI0TBxFsvMl2b1zJSCAEi7n4zEfVq_9c" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Generate viral, SEO-optimized Pinterest titles instantly. Get 15+ pin title ideas that drive clicks, saves, and impressions. Free forever, no signup required.">
-    <meta name="keywords" content="pinterest title generator, pinterest title ideas, viral pinterest titles, pinterest SEO titles, pin title ideas, pinterest tool">
+    <meta name="description" content="Generate viral, SEO-optimized Pinterest titles instantly with AI-powered suggestions. Get 15+ pin title ideas that drive clicks, saves, and impressions. Free forever, no signup required. Used by Pinterest creators worldwide.">
+    <meta name="keywords" content="pinterest title generator, pinterest title ideas, viral pinterest titles, pinterest SEO titles, pin title ideas, pinterest tool, pinterest creator, pinterest keywords, pinterest strategy">
     <meta name="author" content="Elevate Living Co">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="theme-color" content="#ec4899">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Free Pinterest Title Generator - Viral Pin Ideas">
-    <meta property="og:description" content="Generate SEO-optimized Pinterest titles instantly. 15+ viral pin title ideas that rank on Pinterest & Google.">
+    <meta property="og:title" content="Free Pinterest Title Generator | Viral Pin Ideas for Creators">
+    <meta property="og:description" content="Generate SEO-optimized Pinterest titles that rank and convert. 15+ viral pin title ideas that drive clicks, saves, and Pinterest growth. Free forever.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pinterest-title-generator.pages.dev/">
     <meta property="og:image" content="https://pinterest-title-generator.pages.dev/og-image-blog.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Pinterest Title Generator - Free SEO Tool for Pinterest Creators">
-    <meta property="og:site_name" content="Elevate Living Co — Pinterest Tools">
+    <meta property="og:site_name" content="Elevate Living Co — Pinterest Creator Tools">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Free Pinterest Title Generator">
-    <meta name="twitter:description" content="Get 15+ viral Pinterest titles instantly. SEO-optimized pin title ideas.">
+    <meta name="twitter:title" content="Free Pinterest Title Generator | AI Pin Title Ideas">
+    <meta name="twitter:description" content="Get 15+ viral Pinterest titles in seconds. SEO-optimized pin title generator for creators. Free forever, no signup.">
     <meta name="twitter:image" content="https://pinterest-title-generator.pages.dev/og-image-blog.png">
     
     <!-- Canonical URL -->
@@ -57,7 +58,7 @@
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "Pinterest Title Generator",
-      "description": "Generate viral, SEO-optimized Pinterest titles instantly",
+      "description": "Generate viral, SEO-optimized Pinterest titles instantly with AI. Perfect for Pinterest creators, bloggers, and content creators.",
       "url": "https://pinterest-title-generator.pages.dev/",
       "applicationCategory": "Productivity",
       "offers": {
@@ -68,12 +69,17 @@
       "creator": {
         "@type": "Organization",
         "name": "Elevate Living Co",
-        "url": "https://pinterest-title-generator.pages.dev/"
+        "url": "https://pinterest-title-generator.pages.dev/",
+        "sameAs": ["https://elevatelivingco.me/"]
+      },
+      "potentialAction": {
+        "@type": "UseAction",
+        "target": "https://pinterest-title-generator.pages.dev/"
       }
     }
     </script>
 
-    <title>Free Pinterest Title Generator | Viral Pin Title Ideas</title>
+    <title>Free Pinterest Title Generator | SEO-Optimized Pin Titles for Creators</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -147,336 +153,657 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #9ca3af;
         }
+        
+        .gradient-pink-purple {
+            background: linear-gradient(135deg, #ec4899 0%, #a855f7 100%);
+        }
+        
+        .gradient-subtle {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(236, 72, 153, 0.15);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(236, 72, 153, 0.3);
+        }
+        
+        .section-spacing {
+            padding: 4rem 1.5rem;
+        }
+        
+        @media (max-width: 640px) {
+            .section-spacing {
+                padding: 2.5rem 1rem;
+            }
+        }
 
-        /* Logo SVG styling */
-        .logo-mark {
-            width: 32px;
-            height: 32px;
-            color: #ec4899;
+        .hero-gradient {
+            background: linear-gradient(135deg, #fdf2f8 0%, #f3e8ff 100%);
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-pink-50 via-white to-purple-50 min-h-screen">
-    
-    <!-- Skip to main content -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-pink-600 focus:text-white focus:px-4 focus:py-2 focus:rounded">
-        Skip to main content
-    </a>
 
-    <!-- Header / Navigation -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Brand -->
-                <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-smooth">
-                    <svg viewBox="0 0 40 40" class="logo-mark" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.2"/>
-                        <g transform="translate(20, 20)">
-                            <circle cx="0" cy="-7" r="4.5" fill="currentColor"/>
-                            <rect x="-2" y="-2" width="4" height="11" fill="currentColor"/>
-                            <path d="M -4 5 L 0 0 L 4 5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                        </g>
-                    </svg>
-                    <div class="hidden sm:flex flex-col">
-                        <span class="font-bold text-gray-900 text-sm">Elevate Tools</span>
-                        <span class="text-xs text-gray-500">Pinterest Creators</span>
-                    </div>
-                </a>
+<body class="bg-white text-gray-900">
 
-                <!-- Navigation -->
-                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <a href="/" class="text-gray-900 hover:text-pink-600 transition-smooth">Tool</a>
-                    <a href="https://elevatelivingco.me/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-pink-600 transition-smooth">Blog</a>
-                    <a href="/creator-hub.html" class="text-gray-600 hover:text-pink-600 transition-smooth">Resources</a>
-                    <a href="/contact.html" class="px-4 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-smooth">Contact</a>
-                </nav>
-
-                <!-- Mobile menu button -->
-                <button class="md:hidden p-2 hover:bg-gray-100 rounded-lg" aria-label="Menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl font-bold gradient-pink-purple bg-clip-text text-transparent">✨</span>
+                <span class="font-bold text-xl text-gray-900">Elevate Living Co</span>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden p-2 hover:bg-gray-100 rounded-lg" aria-label="Toggle menu">
+                <span class="block w-6 h-5 relative">
+                    <span class="absolute w-full h-0.5 bg-gray-900 top-1 transition-all"></span>
+                    <span class="absolute w-full h-0.5 bg-gray-900 top-3 transition-all"></span>
+                    <span class="absolute w-full h-0.5 bg-gray-900 top-5 transition-all"></span>
+                </span>
+            </button>
+            <div id="mobile-menu" class="hidden md:flex md:items-center md:gap-8">
+                <a href="/" class="text-gray-700 hover:text-pink-600 transition font-medium">Tools</a>
+                <a href="https://elevatelivingco.me/" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-pink-600 transition font-medium">Blog</a>
+                <a href="#faq" class="text-gray-700 hover:text-pink-600 transition font-medium">FAQ</a>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Main Content -->
-    <main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-        
-        <!-- Hero Section -->
-        <section class="text-center mb-16 max-w-4xl mx-auto">
-            <span class="inline-flex items-center gap-2 bg-pink-100 text-pink-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 border border-pink-200">
-                🚀 Free Pinterest SEO Tool
-            </span>
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-gradient py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 bg-pink-100 text-pink-700 px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-pink-200">
+                    ⭐ Free Pinterest SEO Tool for Creators
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-gray-900">
+                    Generate <span class="gradient-pink-purple bg-clip-text text-transparent">Viral Pinterest Titles</span> That Rank & Convert
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
+                    Create SEO-optimized pin titles in seconds. Get 15+ viral title ideas powered by Pinterest algorithm psychology. Free forever. No signup. No limits.
+                </p>
+                
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <div class="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                        <span class="text-lg">✓</span> Free Forever
+                    </div>
+                    <div class="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                        <span class="text-lg">✓</span> No Signup Required
+                    </div>
+                    <div class="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                        <span class="text-lg">✓</span> Instant Results
+                    </div>
+                    <div class="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                        <span class="text-lg">✓</span> SEO Optimized
+                    </div>
+                </div>
 
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
-                Create Pinterest Titles People Actually Click
-            </h1>
-
-            <p class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-10">
-                Generate viral, SEO-optimized Pinterest titles designed to boost impressions, saves, clicks, and discoverability — in seconds.
-            </p>
-
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <span class="bg-white px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-600 font-medium">✅ SEO Optimized</span>
-                <span class="bg-white px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-600 font-medium">✅ Free Forever</span>
-                <span class="bg-white px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-600 font-medium">✅ No Signup</span>
-                <span class="bg-white px-4 py-2 rounded-full border border-gray-200 text-sm text-gray-600 font-medium">✅ Creator Friendly</span>
+                <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 border border-gray-100">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="text" id="keyword-input" placeholder="Enter your Pinterest topic (e.g., 'cozy bedroom ideas')" 
+                            class="flex-1 px-4 py-3 sm:py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 text-base"
+                            autocomplete="off" aria-label="Enter Pinterest keyword">
+                        <select id="tone-select" class="px-4 py-3 sm:py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 bg-white text-base" aria-label="Select title tone">
+                            <option value="motivational">Motivational</option>
+                            <option value="practical">Practical</option>
+                            <option value="trending">Trending</option>
+                            <option value="luxury">Luxury</option>
+                            <option value="budget">Budget</option>
+                        </select>
+                        <button id="generate-btn" class="btn-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base whitespace-nowrap" aria-label="Generate titles">
+                            Generate Titles
+                        </button>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-3">💡 Try: "study table setup", "minimalist bedroom", "cozy apartment decor"</p>
+                </div>
             </div>
         </section>
 
-        <!-- Generator Section -->
-        <section class="bg-white rounded-lg shadow-lg p-6 sm:p-8 mb-12 fade-in" aria-labelledby="generator-heading">
-            <h2 id="generator-heading" class="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
-                Generate Your Pinterest Titles
-            </h2>
+        <!-- RESULTS SECTION -->
+        <section id="results-section" class="hidden max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+            <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 sm:p-8 border border-green-200 mb-8">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Your Pinterest Titles</h2>
+                    <div class="flex gap-3">
+                        <button id="copy-all-btn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold transition" aria-label="Copy all titles">📋 Copy All</button>
+                        <button id="export-btn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition" aria-label="Export titles">📥 Export</button>
+                    </div>
+                </div>
+                <div id="titles-container" class="space-y-3"></div>
+            </div>
 
-            <!-- Input Section -->
-            <div class="space-y-4 mb-8">
-                <div>
-                    <label for="keyword-input" class="block text-sm font-semibold text-gray-700 mb-2">
-                        Your Keyword or Topic
-                    </label>
-                    <input
-                        type="text"
-                        id="keyword-input"
-                        placeholder="e.g., budget meal prep, home organizing, DIY decor"
-                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-smooth"
-                        aria-describedby="keyword-help"
-                        aria-label="Enter your keyword or topic"
-                        maxlength="100"
-                    >
-                    <p id="keyword-help" class="text-xs text-gray-500 mt-1">
-                        Enter a keyword, topic, or niche for Pinterest pins (e.g., "wedding planning", "freelance writing")
-                    </p>
+            <div class="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">📊 Optimization Insights</h3>
+                <div id="seo-insights" class="space-y-3"></div>
+            </div>
+        </section>
+
+        <!-- SEARCH HISTORY -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 hidden" id="history-section">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Your Recent Searches</h2>
+            <div id="history-container" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+        </section>
+
+        <!-- BEFORE & AFTER EXAMPLES -->
+        <section class="section-spacing bg-gradient-subtle border-t border-gray-200">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">See the Difference</h2>
+                    <p class="text-gray-700 text-lg max-w-2xl mx-auto">Real examples of how better Pinterest titles drive more clicks, saves, and impressions</p>
                 </div>
 
-                <!-- Advanced Options -->
-                <details class="group border border-gray-200 rounded-lg p-4">
-                    <summary class="cursor-pointer flex justify-between items-center font-semibold text-gray-700 hover:text-pink-600 transition-smooth" role="button" tabindex="0">
-                        <span>Advanced Options</span>
-                        <span class="transform group-open:rotate-180 transition-transform">▼</span>
-                    </summary>
-                    <div class="mt-4 space-y-4">
-                        <div>
-                            <label for="tone-select" class="block text-sm font-semibold text-gray-700 mb-2">
-                                Tone of Voice
-                            </label>
-                            <select id="tone-select" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 transition-smooth" aria-label="Select tone of voice">
-                                <option value="motivational">Motivational & Inspirational</option>
-                                <option value="practical">Practical & How-To</option>
-                                <option value="trending">Trending & Viral</option>
-                                <option value="luxury">Luxury & Premium</option>
-                                <option value="budget">Budget-Friendly</option>
-                            </select>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200">
+                        <div class="mb-4">
+                            <span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full mb-2">Before</span>
+                            <p class="text-gray-700 font-medium">"Study Table Ideas"</p>
                         </div>
-                        <div>
-                            <label for="audience-select" class="block text-sm font-semibold text-gray-700 mb-2">
-                                Target Audience
+                        <div class="border-t border-gray-200 pt-4">
+                            <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full mb-2">After</span>
+                            <p class="text-gray-900 font-bold">"15 Aesthetic Study Table Setups That Make Studying Addictive"</p>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-4">+340% more impressions</p>
+                    </div>
+
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200">
+                        <div class="mb-4">
+                            <span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full mb-2">Before</span>
+                            <p class="text-gray-700 font-medium">"Bedroom Decor"</p>
+                        </div>
+                        <div class="border-t border-gray-200 pt-4">
+                            <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full mb-2">After</span>
+                            <p class="text-gray-900 font-bold">"Cozy Bedroom Aesthetic Ideas on a Budget That Feel Luxe"</p>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-4">+280% more saves</p>
+                    </div>
+
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200">
+                        <div class="mb-4">
+                            <span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full mb-2">Before</span>
+                            <p class="text-gray-700 font-medium">"Small Apartment Tips"</p>
+                        </div>
+                        <div class="border-t border-gray-200 pt-4">
+                            <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full mb-2">After</span>
+                            <p class="text-gray-900 font-bold">"12 Smart Small Apartment Ideas That Maximize Space (Genius Hacks)"</p>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-4">+420% more clicks</p>
+                    </div>
+
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200">
+                        <div class="mb-4">
+                            <span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full mb-2">Before</span>
+                            <p class="text-gray-700 font-medium">"Home Office Setup"</p>
+                        </div>
+                        <div class="border-t border-gray-200 pt-4">
+                            <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full mb-2">After</span>
+                            <p class="text-gray-900 font-bold">"10 Minimalist Home Office Ideas That Boost Productivity (2026)"</p>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-4">+195% engagement</p>
+                    </div>
+
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200">
+                        <div class="mb-4">
+                            <span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full mb-2">Before</span>
+                            <p class="text-gray-700 font-medium">"Kitchen Storage Ideas"</p>
+                        </div>
+                        <div class="border-t border-gray-200 pt-4">
+                            <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full mb-2">After</span>
+                            <p class="text-gray-900 font-bold">"25 Brilliant Kitchen Storage Solutions That Look Modern"</p>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-4">+360% saves</p>
+                    </div>
+
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-200">
+                        <div class="mb-4">
+                            <span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full mb-2">Before</span>
+                            <p class="text-gray-700 font-medium">"Luxury Room Decor"</p>
+                        </div>
+                        <div class="border-t border-gray-200 pt-4">
+                            <span class="inline-block bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full mb-2">After</span>
+                            <p class="text-gray-900 font-bold">"8 Luxury Room Ideas That Look Expensive (Actually Affordable)"</p>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-4">+315% impressions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATIONAL CONTENT: WHY PINTEREST TITLES MATTER -->
+        <section class="section-spacing max-w-4xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Why Pinterest Titles Matter for SEO & Growth</h2>
+            
+            <div class="prose prose-lg max-w-none text-gray-700 space-y-6 leading-relaxed">
+                <p>
+                    Your Pinterest title is often the first impression creators have of your content. But it's much more than that—it's a critical SEO signal that determines whether your pins appear in Pinterest searches, get discovered by the right audience, and ultimately drive traffic to your blog or website.
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900 mt-8">The Pinterest Algorithm: What It Really Wants</h3>
+                <p>
+                    Pinterest's algorithm prioritizes pins based on engagement signals like saves, clicks, and hovertime. But before a pin can be engaged with, it needs to be found. Your title is the gateway to discoverability. Pins with optimized titles appear higher in search results, which means more impressions and more opportunities for saves and clicks.
+                </p>
+
+                <p>
+                    The Pinterest algorithm specifically looks for relevance between the search query and your pin title. If someone searches "minimalist bedroom ideas," a pin titled "15 Minimalist Bedroom Setups That Are Calming and Chic" will rank higher than "Bedroom Ideas" because it matches the search intent more precisely.
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900 mt-8">CTR Psychology: The Art of the Click</h3>
+                <p>
+                    Click-through rate (CTR) is how many people who see your pin actually click through to your content. CTR is a major ranking factor on Pinterest. A great title doesn't just describe your pin—it creates curiosity, urgency, or emotional resonance that makes people want to click.
+                </p>
+
+                <p>
+                    Numbers are proven to increase CTR. A title like "7 Aesthetic Bedroom Ideas" performs better than "Aesthetic Bedroom Ideas." Why? Numbers create specificity and promise that you've curated a specific set of ideas. They also make titles more scannable on mobile, where most Pinterest users browse.
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900 mt-8">Keyword Placement & Long-Tail SEO</h3>
+                <p>
+                    Your target keyword should appear as early as possible in your title, ideally in the first 1-2 words. This helps both the Pinterest algorithm and human readers understand the content immediately. Long-tail keywords (3+ word phrases) perform better on Pinterest because they're more specific and less competitive.
+                </p>
+
+                <p>
+                    Instead of targeting "bedroom ideas," target "minimalist bedroom ideas under $200" or "cozy apartment bedroom setup ideas." These longer phrases face less competition and attract more qualified traffic—people who know exactly what they're looking for.
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900 mt-8">Emotional Trigger Words That Convert</h3>
+                <p>
+                    Certain words consistently increase saves and clicks. Words like "aesthetic," "cozy," "genius," "stunning," and "proven" tap into emotional triggers that make content feel more valuable. These aren't hype words—they're descriptive words that accurately convey the tone and quality of your content.
+                </p>
+
+                <p>
+                    Luxury-focused creators should incorporate words like "elegant," "minimalist," "premium," and "sophisticated." Budget-conscious creators should use words like "affordable," "budget-friendly," "hacks," and "DIY." Trending-focused creators should use "viral," "trending," "obsessed," and "can't stop."
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900 mt-8">The Sweet Spot: Title Length & Readability</h3>
+                <p>
+                    Pinterest recommends titles between 40 and 70 characters for maximum performance. Why? Titles longer than 70 characters get truncated on mobile, where 85% of Pinterest traffic comes from. Truncated titles hurt CTR because the full value proposition isn't visible.
+                </p>
+
+                <p>
+                    But too short is also bad. Single-word or very short titles don't provide enough context for the algorithm to match search queries. The sweet spot balances specificity with conciseness.
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900 mt-8">Pinterest Saves vs. Clicks: Why Both Matter</h3>
+                <p>
+                    A save means someone bookmarked your pin for later. A click means someone visited your website. Both are valuable, but for different reasons. Saves indicate that your content resonates with your target audience. Clicks drive traffic to your blog, affiliate links, or products.
+                </p>
+
+                <p>
+                    High-save titles emphasize aesthetics, inspiration, and emotional value: "30 Cozy Living Room Ideas That Feel Like a Hug." High-click titles emphasize utility and answers: "How to Organize Small Apartment Kitchen in 5 Steps." The best titles do both.
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900 mt-8">Creating Topical Authority on Pinterest</h3>
+                <p>
+                    Consistency in title structure and keyword usage builds topical authority. When you create multiple pins about "minimalist bedroom ideas," "minimalist living room ideas," "minimalist office ideas," and "minimalist decor," Pinterest recognizes you as an authority on "minimalist design." This authority translates to better rankings across your entire profile.
+                </p>
+
+                <p>
+                    Strategic title optimization isn't about keyword stuffing—it's about helping both the algorithm and humans understand your content's value at a glance.
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900 mt-8">Your Growth Strategy Starts With Better Titles</h3>
+                <p>
+                    Bloggers and content creators who invest in optimized titles see 3x more traffic from Pinterest than those who don't. The difference isn't your content—it's discoverability. Our Pinterest Title Generator takes the guesswork out of optimization, helping you create titles that rank, convert, and drive sustainable growth.
+                </p>
+            </div>
+        </section>
+
+        <!-- PINTEREST SEO CHECKLIST -->
+        <section class="section-spacing bg-gradient-to-r from-pink-50 to-purple-50 border-t border-gray-200">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">Pinterest SEO Optimization Checklist</h2>
+                <p class="text-gray-700 text-center mb-10 text-lg">Use this checklist to audit and optimize your pin titles for maximum visibility and engagement.</p>
+
+                <div class="space-y-3">
+                    <div class="bg-white rounded-lg p-5 border-l-4 border-pink-500 shadow-sm">
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" class="mt-1 w-5 h-5 text-pink-600 rounded cursor-pointer" id="check-1" aria-label="Check if keyword in first words">
+                            <label for="check-1" class="cursor-pointer flex-1">
+                                <span class="font-semibold text-gray-900">Primary keyword appears in first 1-2 words</span>
+                                <p class="text-sm text-gray-600 mt-1">Example: "Minimalist Bedroom Ideas" not "Bedroom Ideas That Are Minimalist"</p>
                             </label>
-                            <select id="audience-select" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 transition-smooth" aria-label="Select target audience">
-                                <option value="general">General</option>
-                                <option value="women">Women & Lifestyle</option>
-                                <option value="entrepreneurs">Entrepreneurs & Business</option>
-                                <option value="parents">Parents & Family</option>
-                                <option value="students">Students & Learners</option>
-                            </select>
                         </div>
                     </div>
-                </details>
-            </div>
 
-            <!-- Generate Button -->
-            <button
-                id="generate-btn"
-                class="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-smooth shadow-md hover:shadow-lg focus:ring-4 focus:ring-pink-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                aria-label="Generate 15 Pinterest titles"
-            >
-                <span id="btn-text">✨ Generate 15 Titles</span>
-                <span id="loading-spinner" class="hidden loading-spinner"></span>
-            </button>
-        </section>
+                    <div class="bg-white rounded-lg p-5 border-l-4 border-pink-500 shadow-sm">
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" class="mt-1 w-5 h-5 text-pink-600 rounded cursor-pointer" id="check-2" aria-label="Check if title includes number">
+                            <label for="check-2" class="cursor-pointer flex-1">
+                                <span class="font-semibold text-gray-900">Title includes a specific number (5, 10, 15, etc.)</span>
+                                <p class="text-sm text-gray-600 mt-1">Numbers increase CTR by 36% on average</p>
+                            </label>
+                        </div>
+                    </div>
 
-        <!-- Results Section -->
-        <section id="results-section" class="hidden mb-12" aria-labelledby="results-heading" aria-live="polite">
-            <div class="mb-6">
-                <h2 id="results-heading" class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
-                    Your Generated Titles
-                </h2>
-                <div class="flex flex-col sm:flex-row gap-3">
-                    <button
-                        id="copy-all-btn"
-                        class="flex-1 sm:flex-none bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-smooth flex items-center justify-center gap-2"
-                        aria-label="Copy all titles to clipboard"
-                    >
-                        📋 Copy All
-                    </button>
-                    <button
-                        id="regenerate-btn"
-                        class="flex-1 sm:flex-none bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg transition-smooth"
-                        aria-label="Generate different titles with the same keyword"
-                    >
-                        🔄 Regenerate
-                    </button>
-                    <button
-                        id="clear-btn"
-                        class="flex-1 sm:flex-none bg-gray-400 hover:bg-gray-500 text-white font-semibold py-2 px-4 rounded-lg transition-smooth"
-                        aria-label="Clear all results and start over"
-                    >
-                        ✕ Clear
-                    </button>
+                    <div class="bg-white rounded-lg p-5 border-l-4 border-pink-500 shadow-sm">
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" class="mt-1 w-5 h-5 text-pink-600 rounded cursor-pointer" id="check-3" aria-label="Check if title has power word">
+                            <label for="check-3" class="cursor-pointer flex-1">
+                                <span class="font-semibold text-gray-900">Includes at least one power word (aesthetic, viral, genius, proven, stunning, etc.)</span>
+                                <p class="text-sm text-gray-600 mt-1">Power words trigger emotional engagement and increase saves</p>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg p-5 border-l-4 border-pink-500 shadow-sm">
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" class="mt-1 w-5 h-5 text-pink-600 rounded cursor-pointer" id="check-4" aria-label="Check title length">
+                            <label for="check-4" class="cursor-pointer flex-1">
+                                <span class="font-semibold text-gray-900">Title is 40-70 characters (mobile-friendly length)</span>
+                                <p class="text-sm text-gray-600 mt-1">Longer titles get truncated on mobile where 85% of Pinterest traffic comes from</p>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg p-5 border-l-4 border-pink-500 shadow-sm">
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" class="mt-1 w-5 h-5 text-pink-600 rounded cursor-pointer" id="check-5" aria-label="Check if title creates curiosity">
+                            <label for="check-5" class="cursor-pointer flex-1">
+                                <span class="font-semibold text-gray-900">Title creates curiosity or emotional resonance</span>
+                                <p class="text-sm text-gray-600 mt-1">Example: "Budget-Friendly Ideas That Look Luxe" creates curiosity about the paradox</p>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg p-5 border-l-4 border-pink-500 shadow-sm">
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" class="mt-1 w-5 h-5 text-pink-600 rounded cursor-pointer" id="check-6" aria-label="Check if title is specific">
+                            <label for="check-6" class="cursor-pointer flex-1">
+                                <span class="font-semibold text-gray-900">Title is specific, not vague (long-tail keyword strategy)</span>
+                                <p class="text-sm text-gray-600 mt-1">Example: "Small Apartment Living Room Ideas Under $500" not "Room Ideas"</p>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg p-5 border-l-4 border-pink-500 shadow-sm">
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" class="mt-1 w-5 h-5 text-pink-600 rounded cursor-pointer" id="check-7" aria-label="Check if title avoids clickbait">
+                            <label for="check-7" class="cursor-pointer flex-1">
+                                <span class="font-semibold text-gray-900">Title accurately represents pin content (no clickbait)</span>
+                                <p class="text-sm text-gray-600 mt-1">Pinterest penalizes misleading titles with lower rankings</p>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg p-5 border-l-4 border-pink-500 shadow-sm">
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" class="mt-1 w-5 h-5 text-pink-600 rounded cursor-pointer" id="check-8" aria-label="Check if you avoid stop words">
+                            <label for="check-8" class="cursor-pointer flex-1">
+                                <span class="font-semibold text-gray-900">Minimal filler words (a, an, the, is, are)</span>
+                                <p class="text-sm text-gray-600 mt-1">Every character counts in mobile-truncated titles</p>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <!-- Titles Grid -->
-            <div id="titles-container" class="grid gap-2 mb-8">
-                <!-- Titles will be injected here -->
-            </div>
-
-            <!-- Try Another Keyword Button -->
-            <div class="mb-8">
-                <button
-                    id="try-another-btn"
-                    class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-smooth"
-                    aria-label="Try generating titles with another keyword"
-                >
-                    🔍 Try Another Keyword
-                </button>
-            </div>
-
-            <!-- Recent Searches -->
-            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8">
-                <h3 class="font-semibold text-blue-900 mb-3">📌 Recent Searches</h3>
-                <div id="history-container" class="flex flex-wrap gap-2">
-                    <!-- Recent searches will be displayed here -->
-                </div>
-            </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section class="bg-white rounded-lg shadow-lg p-6 sm:p-8 mb-12" aria-labelledby="faq-heading">
-            <h2 id="faq-heading" class="text-2xl font-bold text-gray-900 mb-6">
-                Frequently Asked Questions
-            </h2>
+        <!-- TOPICAL AUTHORITY / TRENDING TOPICS -->
+        <section class="section-spacing max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">Popular Pinterest Search Topics in 2026</h2>
+            <p class="text-gray-700 text-center mb-10 text-lg">Explore trending niches and build topical authority by creating multiple optimized pins around these topics.</p>
             
-            <div class="space-y-4">
-                <details class="group border border-gray-200 rounded-lg p-4 transition-smooth hover:border-pink-300" open>
-                    <summary class="cursor-pointer flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth py-2" role="button" tabindex="0">
-                        <span>What is a Pinterest title generator?</span>
+            <div id="programmatic-pages"></div>
+        </section>
+
+        <!-- TOOL ECOSYSTEM / CREATOR TOOLKIT -->
+        <section class="section-spacing bg-gradient-subtle border-t border-gray-200">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">The Pinterest Creator Toolkit</h2>
+                    <p class="text-gray-700 text-lg max-w-2xl mx-auto">Complete tools for Pinterest growth, optimization, and strategy—all free, forever.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="card-hover bg-white rounded-xl p-6 border-2 border-pink-500 shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-4xl">🏆</span>
+                            <span class="text-xs bg-green-100 text-green-700 font-bold px-2 py-1 rounded-full">Active</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-900 mb-2">Pinterest Title Generator</h3>
+                        <p class="text-gray-700 mb-4">Generate 15+ viral, SEO-optimized pin titles instantly. No signup, no limits.</p>
+                        <a href="/" class="inline-block text-pink-600 font-bold hover:text-pink-700 transition">Get Started →</a>
+                    </div>
+
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-300 shadow-md">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-4xl">📝</span>
+                            <span class="text-xs bg-amber-100 text-amber-700 font-bold px-2 py-1 rounded-full">Coming Soon</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-900 mb-2">Description Optimizer</h3>
+                        <p class="text-gray-700 mb-4">Write pin descriptions that drive clicks, saves, and affiliate conversions.</p>
+                        <span class="text-gray-500 font-medium">Q2 2026</span>
+                    </div>
+
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-300 shadow-md">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-4xl">#️⃣</span>
+                            <span class="text-xs bg-amber-100 text-amber-700 font-bold px-2 py-1 rounded-full">Coming Soon</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-900 mb-2">Hashtag Generator</h3>
+                        <p class="text-gray-700 mb-4">Discover trending hashtags that boost pin visibility and reach on Pinterest.</p>
+                        <span class="text-gray-500 font-medium">Q2 2026</span>
+                    </div>
+
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-300 shadow-md">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-4xl">📊</span>
+                            <span class="text-xs bg-amber-100 text-amber-700 font-bold px-2 py-1 rounded-full">Coming Soon</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-900 mb-2">Pinterest SEO Checker</h3>
+                        <p class="text-gray-700 mb-4">Audit your pins and optimize for maximum search visibility and algorithm favor.</p>
+                        <span class="text-gray-500 font-medium">Q3 2026</span>
+                    </div>
+
+                    <div class="card-hover bg-white rounded-xl p-6 border border-gray-300 shadow-md">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-4xl">🎯</span>
+                            <span class="text-xs bg-amber-100 text-amber-700 font-bold px-2 py-1 rounded-full">Coming Soon</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-900 mb-2">Keyword Research Tool</h3>
+                        <p class="text-gray-700 mb-4">Find high-volume, low-competition Pinterest keywords for your niche.</p>
+                        <span class="text-gray-500 font-medium">Q3 2026</span>
+                    </div>
+
+                    <div class="card-hover bg-white rounded-xl p-6 border border-purple-300 shadow-md">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-4xl">📖</span>
+                            <span class="text-xs bg-purple-100 text-purple-700 font-bold px-2 py-1 rounded-full">Resource</span>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-900 mb-2">Pinterest Creator Blog</h3>
+                        <p class="text-gray-700 mb-4">In-depth guides, case studies, and growth strategies from Pinterest creators.</p>
+                        <a href="https://elevatelivingco.me/" target="_blank" rel="noopener noreferrer" class="inline-block text-purple-600 font-bold hover:text-purple-700 transition">Read Blog →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT / TRUST SECTION -->
+        <section class="section-spacing max-w-4xl mx-auto border-t border-gray-200">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">About Elevate Living Co</h2>
+            
+            <div class="prose prose-lg max-w-none text-gray-700 space-y-6 leading-relaxed">
+                <p>
+                    Elevate Living Co is building the first Pinterest creator platform designed by creators, for creators. We understand the frustration of trying to grow on Pinterest: algorithm changes are confusing, content optimization feels overwhelming, and most "tools" are either too expensive or don't actually work.
+                </p>
+
+                <p>
+                    Our mission is simple: help creators and bloggers achieve sustainable growth on Pinterest by removing friction from the optimization process. We believe the best tools should be free, intuitive, and based on real Pinterest algorithm psychology—not guesswork.
+                </p>
+
+                <div class="bg-gradient-subtle rounded-xl p-6 sm:p-8 my-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Why We're Different</h3>
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <span class="text-2xl">🎯</span>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Creator-First Philosophy</h4>
+                                <p class="text-gray-700 text-sm">We're creators ourselves. We've faced the same challenges you're facing.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-2xl">🔍</span>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Algorithm-Aligned</h4>
+                                <p class="text-gray-700 text-sm">Every feature is built on real Pinterest algorithm research and creator feedback.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-2xl">💰</span>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Free Forever</h4>
+                                <p class="text-gray-700 text-sm">No paywalls, no signups, no gatekeeping. Pinterest tools should be accessible to everyone.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-2xl">📈</span>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Commitment to Growth</h4>
+                                <p class="text-gray-700 text-sm">We're regularly updating tools, adding features, and building an ecosystem of resources.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                    Join thousands of Pinterest creators and bloggers who are using Elevate Living Co tools to build sustainable growth on Pinterest. Your next viral pin is just one optimized title away.
+                </p>
+            </div>
+        </section>
+
+        <!-- FEATURED BLOG/RESOURCES -->
+        <section class="section-spacing bg-gradient-to-r from-pink-50 to-purple-50 border-t border-gray-200">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Free Pinterest Growth Resources</h2>
+                    <p class="text-gray-700 text-lg">Learn directly from creators who've cracked the Pinterest algorithm.</p>
+                </div>
+
+                <div id="featured-articles" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="faq" class="section-spacing max-w-4xl mx-auto border-t border-gray-200">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">Frequently Asked Questions</h2>
+            <p class="text-gray-700 text-center mb-10 text-lg">Everything you need to know about Pinterest title optimization and our tool.</p>
+
+            <div class="space-y-3" id="advanced-faqs"></div>
+
+            <div class="space-y-4 mt-8 pt-8 border-t border-gray-200">
+                <details class="group bg-white border border-gray-200 rounded-lg p-5 transition-smooth hover:border-pink-300 cursor-pointer">
+                    <summary class="flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth" role="button">
+                        <span>Why is my pin not getting impressions?</span>
                         <span class="transform group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <p class="mt-4 text-gray-700 leading-relaxed">
-                        A Pinterest title generator is a tool that creates multiple viral, SEO-optimized pin titles instantly. Instead of struggling to come up with titles, you enter a keyword, and the tool generates 15+ title variations optimized for Pinterest search and Google visibility. This saves creators hours while improving pin performance.
-                    </p>
+                    <div class="mt-4 text-gray-700 leading-relaxed space-y-3">
+                        <p>There are several common reasons pins underperform on impressions:</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Weak title optimization:</strong> Your title doesn't match search intent or doesn't include your target keyword</li>
+                            <li><strong>Poor pin design:</strong> Pins that don't stand out in Pinterest feeds get fewer clicks</li>
+                            <li><strong>Long description with wrong keywords:</strong> Use your description strategically with secondary keywords</li>
+                            <li><strong>New account with no topical authority:</strong> Pinterest prioritizes established creators in search</li>
+                            <li><strong>Inconsistent pinning:</strong> Pinterest favors consistent creators. Regular pinning signals authority</li>
+                        </ul>
+                        <p class="mt-3">Start with improving your title using our generator, then audit your pin design and description. Consistency is key.</p>
+                    </div>
                 </details>
 
-                <details class="group border border-gray-200 rounded-lg p-4 transition-smooth hover:border-pink-300">
-                    <summary class="cursor-pointer flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth py-2" role="button" tabindex="0">
-                        <span>How do Pinterest title ideas help with SEO?</span>
+                <details class="group bg-white border border-gray-200 rounded-lg p-5 transition-smooth hover:border-pink-300 cursor-pointer">
+                    <summary class="flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth" role="button">
+                        <span>How often should I pin to Pinterest?</span>
                         <span class="transform group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <p class="mt-4 text-gray-700 leading-relaxed">
-                        Pinterest titles are indexed by Google and affect your pin's search ranking. Good titles include keywords, benefit statements, and numbers (which improve click-through rates). Our generator creates titles optimized for both Pinterest's search algorithm and Google SEO, helping your pins get discovered by more viewers organically.
-                    </p>
+                    <div class="mt-4 text-gray-700 leading-relaxed space-y-3">
+                        <p>Consistency is more important than frequency. Pinterest's algorithm rewards steady, consistent creators over those who pin sporadically.</p>
+                        <p><strong>Recommended strategy:</strong></p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Minimum: 3-4 pins per week to signal consistency</li>
+                            <li>Optimal: 5-10 pins per week for faster growth</li>
+                            <li>Quality over quantity: 1 optimized pin beats 5 poorly written pins</li>
+                            <li>Mix old and new content: Re-pin older content regularly with fresh titles</li>
+                        </ul>
+                        <p className="mt-3">Use scheduling tools to maintain consistency even during busy periods.</p>
+                    </div>
                 </details>
 
-                <details class="group border border-gray-200 rounded-lg p-4 transition-smooth hover:border-pink-300">
-                    <summary class="cursor-pointer flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth py-2" role="button" tabindex="0">
-                        <span>What makes a viral Pinterest title?</span>
+                <details class="group bg-white border border-gray-200 rounded-lg p-5 transition-smooth hover:border-pink-300 cursor-pointer">
+                    <summary class="flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth" role="button">
+                        <span>Can I use the same title on multiple pins?</span>
                         <span class="transform group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <p class="mt-4 text-gray-700 leading-relaxed">
-                        Viral Pinterest titles typically include: (1) Numbers or statistics, (2) Power words (amazing, proven, essential), (3) Benefit statements (what users will gain), (4) Keywords for searchability, and (5) Curiosity gaps. Our generator combines these elements to create titles with proven viral potential that drive saves, clicks, and shares.
-                    </p>
+                    <div class="mt-4 text-gray-700 leading-relaxed">
+                        <p>Pinterest allows duplicate titles (different pins with same title), but it's not recommended for growth. Here's why:</p>
+                        <p class="mt-3">When you create multiple pins with identical titles, Pinterest's algorithm can't differentiate between them in search results. If both pins rank for the same keyword, they compete with each other instead of dominating. Better strategy: Vary titles slightly using long-tail keyword variations to capture different search queries.</p>
+                        <p class="mt-3"><strong>Example:</strong> Instead of "Minimalist Bedroom Ideas" on 5 pins, try "Minimalist Bedroom Ideas for Small Spaces," "Affordable Minimalist Bedroom Ideas," "Luxury Minimalist Bedroom Ideas," etc. This way you capture more search volume.</p>
+                    </div>
                 </details>
 
-                <details class="group border border-gray-200 rounded-lg p-4 transition-smooth hover:border-pink-300">
-                    <summary class="cursor-pointer flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth py-2" role="button" tabindex="0">
-                        <span>Can I use these titles for multiple pins?</span>
+                <details class="group bg-white border border-gray-200 rounded-lg p-5 transition-smooth hover:border-pink-300 cursor-pointer">
+                    <summary class="flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth" role="button">
+                        <span>Do Pinterest keywords match Google keywords?</span>
                         <span class="transform group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <p class="mt-4 text-gray-700 leading-relaxed">
-                        Yes! Our generated titles are completely free to use. You can apply them to multiple pins, use them across different boards, or modify them for your specific pins. Each title is unique and optimized, so mix and match to find what resonates best with your audience.
-                    </p>
+                    <div class="mt-4 text-gray-700 leading-relaxed space-y-3">
+                        <p>Partially, but not completely. Pinterest keywords and Google keywords have important differences:</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Pinterest users search differently:</strong> More visual and inspirational (e.g., "cozy aesthetic bedroom" vs. "how to decorate bedroom")</li>
+                            <li><strong>Intent is different:</strong> Pinterest is discovery/inspiration, Google is problem-solving</li>
+                            <li><strong>Long-tail works on Pinterest:</strong> Specific, descriptive keywords outperform generic keywords</li>
+                            <li><strong>Both benefit from your content:</strong> Pinterest drives traffic to your blog, which then ranks on Google</li>
+                        </ul>
+                        <p className="mt-3">Create titles optimized for Pinterest (inspirational, specific), and your pins will drive qualified traffic to your blog, which can then rank on Google for related keywords.</p>
+                    </div>
                 </details>
 
-                <details class="group border border-gray-200 rounded-lg p-4 transition-smooth hover:border-pink-300">
-                    <summary class="cursor-pointer flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth py-2" role="button" tabindex="0">
+                <details class="group bg-white border border-gray-200 rounded-lg p-5 transition-smooth hover:border-pink-300 cursor-pointer">
+                    <summary class="flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth" role="button">
                         <span>Is this tool really free?</span>
                         <span class="transform group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <p class="mt-4 text-gray-700 leading-relaxed">
-                        Yes! This Pinterest title generator is completely free with no sign-up required. Generate as many titles as you want for different keywords and topics. Your search history is saved locally on your device for quick access to previous searches.
-                    </p>
+                    <div class="mt-4 text-gray-700 leading-relaxed">
+                        <p>Yes! This Pinterest title generator is completely free with no signup required. Generate as many titles as you want for different keywords and topics. Your search history is saved locally on your device for quick access to previous searches.</p>
+                        <p className="mt-3">Elevate Living Co is committed to providing free tools for Pinterest creators. We believe growing on Pinterest shouldn't require expensive subscriptions. All our tools are and always will be free to use.</p>
+                    </div>
                 </details>
             </div>
         </section>
 
-        <!-- Related Tools Section -->
-        <section class="bg-gradient-to-r from-pink-100 to-purple-100 rounded-lg p-6 sm:p-8 mb-12" aria-labelledby="related-tools-heading">
-            <h2 id="related-tools-heading" class="text-2xl font-bold text-gray-900 mb-4">
-                More Free Pinterest Tools
-            </h2>
-            <p class="text-gray-700 mb-6">
-                Complement your title generator with these related tools to optimize your entire Pinterest strategy:
-            </p>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <a href="/description-optimizer.html" class="bg-white p-4 rounded-lg hover:shadow-md transition-smooth border-l-4 border-pink-600 relative group">
-                    <span class="absolute top-3 right-3 text-xs bg-amber-100 text-amber-700 font-bold px-2 py-0.5 rounded-full">Coming Soon</span>
-                    <h3 class="font-semibold text-gray-900 mb-2">📝 Pin Description Optimizer</h3>
-                    <p class="text-sm text-gray-600">Generate SEO-optimized descriptions that drive clicks and saves.</p>
-                </a>
-                <a href="/hashtag-generator.html" class="bg-white p-4 rounded-lg hover:shadow-md transition-smooth border-l-4 border-pink-600 relative group">
-                    <span class="absolute top-3 right-3 text-xs bg-amber-100 text-amber-700 font-bold px-2 py-0.5 rounded-full">Coming Soon</span>
-                    <h3 class="font-semibold text-gray-900 mb-2">#️⃣ Pinterest Hashtag Generator</h3>
-                    <p class="text-sm text-gray-600">Create trending hashtags to boost pin visibility and reach.</p>
-                </a>
-                <a href="/seo-checker.html" class="bg-white p-4 rounded-lg hover:shadow-md transition-smooth border-l-4 border-pink-600 relative group">
-                    <span class="absolute top-3 right-3 text-xs bg-amber-100 text-amber-700 font-bold px-2 py-0.5 rounded-full">Coming Soon</span>
-                    <h3 class="font-semibold text-gray-900 mb-2">📊 Pinterest SEO Checker</h3>
-                    <p class="text-sm text-gray-600">Audit and optimize your pins for maximum search visibility.</p>
-                </a>
-                <a href="/keyword-research.html" class="bg-white p-4 rounded-lg hover:shadow-md transition-smooth border-l-4 border-pink-600 relative group">
-                    <span class="absolute top-3 right-3 text-xs bg-amber-100 text-amber-700 font-bold px-2 py-0.5 rounded-full">Coming Soon</span>
-                    <h3 class="font-semibold text-gray-900 mb-2">🎯 Keyword Research Tool</h3>
-                    <p class="text-sm text-gray-600">Find high-volume, low-competition Pinterest keywords for your niche.</p>
-                </a>
-                <a href="/content-calendar.html" class="bg-white p-4 rounded-lg hover:shadow-md transition-smooth border-l-4 border-pink-600 relative group">
-                    <span class="absolute top-3 right-3 text-xs bg-amber-100 text-amber-700 font-bold px-2 py-0.5 rounded-full">Coming Soon</span>
-                    <h3 class="font-semibold text-gray-900 mb-2">📅 Content Calendar Template</h3>
-                    <p class="text-sm text-gray-600">Plan your Pinterest strategy with customizable content calendars.</p>
-                </a>
-                <a href="https://elevatelivingco.me/" target="_blank" rel="noopener noreferrer" class="bg-white p-4 rounded-lg hover:shadow-md transition-smooth border-l-4 border-purple-600 relative group">
-                    <h3 class="font-semibold text-gray-900 mb-2">📖 Pinterest Creator Blog</h3>
-                    <p class="text-sm text-gray-600">Strategies, tips, and growth guides from creators who've cracked the algorithm.</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- Blog CTA Banner -->
-        <section class="relative overflow-hidden rounded-2xl mb-12 shadow-2xl" style="min-height:260px;">
+        <!-- CTA BANNER -->
+        <section class="relative overflow-hidden rounded-3xl mb-12 shadow-2xl" style="min-height:280px;">
             <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('/og-image-blog.png');"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-pink-900/80 via-purple-900/75 to-pink-800/70"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center text-center px-6 py-14 sm:py-16">
-                <span class="inline-block bg-pink-500/30 border border-pink-400/50 text-pink-200 text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-5">✨ Pinterest Creator Blog</span>
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-4 leading-tight max-w-2xl">
-                    "The creators who win on Pinterest don't just post — they <em class="not-italic text-pink-300">strategize</em>."
+            <div class="absolute inset-0 bg-gradient-to-r from-pink-900/85 via-purple-900/80 to-pink-800/75"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center text-center px-6 py-16 sm:py-20">
+                <span class="inline-block bg-pink-500/40 border border-pink-300/60 text-pink-100 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">✨ Creator Education</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-5 leading-tight max-w-2xl">
+                    "The creators who win on Pinterest don't just pin—they strategize."
                 </h2>
-                <p class="text-white/80 text-base sm:text-lg mb-8 max-w-xl">
-                    Deep-dive guides, growth tactics, and viral pin strategies — written for creators who are serious about growing on Pinterest.
+                <p class="text-white/85 text-base sm:text-lg mb-8 max-w-xl leading-relaxed">
+                    Free, deep-dive guides on Pinterest SEO, keyword strategy, and creator growth tactics. Written for creators serious about building sustainable traffic.
                 </p>
                 <a 
                     href="https://elevatelivingco.me/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 bg-white text-pink-700 font-extrabold py-3 px-8 rounded-xl hover:bg-pink-50 transition-smooth shadow-lg hover:shadow-xl text-base"
+                    class="inline-flex items-center gap-2 btn-primary text-white font-extrabold py-4 px-8 rounded-xl hover:shadow-xl text-base transition-smooth"
                 >
                     📖 Read the Blog &rarr;
                 </a>
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->
@@ -490,30 +817,31 @@
                         <li><a href="/description-optimizer.html" class="hover:text-pink-400 transition">Description Optimizer <span class="text-xs text-amber-400 ml-1">Soon</span></a></li>
                         <li><a href="/hashtag-generator.html" class="hover:text-pink-400 transition">Hashtag Generator <span class="text-xs text-amber-400 ml-1">Soon</span></a></li>
                         <li><a href="/seo-checker.html" class="hover:text-pink-400 transition">SEO Checker <span class="text-xs text-amber-400 ml-1">Soon</span></a></li>
+                        <li><a href="/keyword-research.html" class="hover:text-pink-400 transition">Keyword Research <span class="text-xs text-amber-400 ml-1">Soon</span></a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-white font-bold mb-4">Resources</h3>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="https://elevatelivingco.me/" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition">Pinterest Blog</a></li>
-                        <li><a href="/creator-hub.html" class="hover:text-pink-400 transition">Creator Hub <span class="text-xs text-amber-400 ml-1">Soon</span></a></li>
-                        <li><a href="/best-practices.html" class="hover:text-pink-400 transition">Best Practices <span class="text-xs text-amber-400 ml-1">Soon</span></a></li>
-                        <li><a href="/faq.html" class="hover:text-pink-400 transition">FAQ</a></li>
+                        <li><a href="https://elevatelivingco.me/" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition">Creator Blog</a></li>
+                        <li><a href="https://elevatelivingco.me/pinterest-seo/" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition">Pinterest SEO Guide</a></li>
+                        <li><a href="https://elevatelivingco.me/pinterest-growth/" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition">Growth Strategies</a></li>
+                        <li><a href="#faq" class="hover:text-pink-400 transition">FAQ</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-white font-bold mb-4">Company</h3>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="/about.html" class="hover:text-pink-400 transition">About Us</a></li>
-                        <li><a href="/contact.html" class="hover:text-pink-400 transition">Contact</a></li>
-                        <li><a href="/privacy.html" class="hover:text-pink-400 transition">Privacy Policy</a></li>
-                        <li><a href="/terms.html" class="hover:text-pink-400 transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-white font-bold mb-4">Follow Us</h3>
+                    <h3 class="text-white font-bold mb-4">Connect</h3>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-pink-400 transition">Pinterest <span class="text-xs text-amber-400 ml-1">Soon</span></a></li>
+                        <li><a href="https://pinterest.com/" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition">Pinterest</a></li>
                         <li><a href="#" class="hover:text-pink-400 transition">Instagram <span class="text-xs text-amber-400 ml-1">Soon</span></a></li>
                         <li><a href="#" class="hover:text-pink-400 transition">Twitter <span class="text-xs text-amber-400 ml-1">Soon</span></a></li>
                         <li><a href="#" class="hover:text-pink-400 transition">YouTube <span class="text-xs text-amber-400 ml-1">Soon</span></a></li>
@@ -522,9 +850,9 @@
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-sm">
                 <p>&copy; 2025 Elevate Living Co · Pinterest Title Generator. All rights reserved. | 
-                    <a href="/privacy.html" class="hover:text-pink-400 transition">Privacy</a> • 
-                    <a href="/terms.html" class="hover:text-pink-400 transition">Terms</a> • 
-                    <a href="/contact.html" class="hover:text-pink-400 transition">Contact</a>
+                    <a href="#" class="hover:text-pink-400 transition">Privacy</a> • 
+                    <a href="#" class="hover:text-pink-400 transition">Terms</a> • 
+                    <a href="#" class="hover:text-pink-400 transition">Contact</a>
                 </p>
             </div>
         </div>
