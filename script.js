@@ -9,102 +9,273 @@
 // CONSTANTS
 // ============================================================
 
-const POWER_WORDS = [
-  "Viral", "Secret", "Proven", "Brilliant", "Genius",
-  "Aesthetic", "Easy", "Stunning", "Smart", "Luxury",
-  "Minimalist", "Cozy", "Trending", "Addictive", "Creative",
-  "Elegant", "Game-Changing", "Budget-Friendly", "Insanely Good", "Must-Try"
-];
-
-const NUMBERS = [5, 7, 9, 10, 12, 15, 20, 25, 30, 50];
-
-const TITLE_TEMPLATES = {
-  motivational: [
-    "{power} {keyword} Ideas That Will Inspire You",
-    "{number} {power} {keyword} Hacks You Need",
-    "Transform Your Life With These {keyword} Tips",
-    "The Ultimate {keyword} Blueprint",
-    "How to Master {keyword} Like a Pro",
-    "{number} {keyword} Secrets Nobody Talks About",
-    "{power} {keyword} Strategies That Actually Work",
-    "The {keyword} Mindset Shift You Need",
-    "Why Everyone is Obsessed With {keyword}",
-    "{number} Life-Changing {keyword} Ideas",
-    "{number} {power} {keyword} Breakthroughs",
-    "Unlock Your Best {keyword} Life",
-    "Master {keyword} With This {number}-Step System",
-    "{number} {keyword} Moves That Change Everything",
-    "The {power} {keyword} Secret Everyone's Talking About"
+const SEMANTIC_WORD_BANKS = {
+  aestheticWords: [
+    "Aesthetic", "Dreamy", "Stunning", "Visual", "Elegant",
+    "Minimalist", "Inspiring", "Pinterest-Worthy", "Curated", "Beautiful"
   ],
-  practical: [
-    "How to {keyword}: Step-by-Step Guide",
-    "{number} Easy {keyword} Tips for Beginners",
-    "{keyword} Checklist: {number} Things You Need",
-    "{number} Quick {keyword} Solutions",
-    "DIY {keyword}: Easy Methods That Work",
-    "The Complete {keyword} Starter Guide",
-    "{number} Tested {keyword} Methods",
-    "Simple {keyword} Ideas You Can Try Today",
-    "{power} {keyword} Tricks for Faster Results",
-    "The Best {keyword} Setup Guide",
-    "Learn {keyword} in {number} Simple Steps",
-    "{number} {keyword} Tools That Actually Help",
-    "Start {keyword} Today: {number} Beginner Tips",
-    "{keyword} How-To (No Experience Needed)",
-    "{number} Budget {keyword} Tutorials for Beginners"
+  luxuryWords: [
+    "Luxury", "Premium", "Elegant", "Sophisticated", "Upscale",
+    "High-End", "Refined", "Exclusive", "Opulent", "Timeless"
   ],
-  trending: [
-    "Everyone's Talking About {keyword}: Here's Why",
-    "{number} Viral {keyword} Trends Right Now",
-    "This {keyword} Trend is Exploding on Pinterest",
-    "{keyword}: The Aesthetic Trend Everyone Loves",
-    "{number} Trending {keyword} Ideas for 2026",
-    "Pinterest Can't Stop Saving These {keyword} Ideas",
-    "The {keyword} Craze Explained",
-    "{power} {keyword} Trends Taking Over",
-    "The Most Saved {keyword} Ideas This Month",
-    "Why {keyword} is Blowing Up Right Now",
-    "{number} {keyword} Ideas Going Viral This Week",
-    "Everyone's Obsessed With {keyword}: {number} Reasons",
-    "{keyword} is Everywhere — Here's What You Need to Know",
-    "The {number} Hottest {keyword} Ideas Right Now",
-    "What's Everyone Doing With {keyword}? {number} Ideas"
+  urgencyWords: [
+    "Trending", "Viral", "Must-See", "Don't Miss", "Hot Right Now",
+    "Blowing Up", "Everyone's", "All Over", "This Season", "This Week"
   ],
-  luxury: [
-    "Luxury {keyword} Ideas You'll Love",
-    "{number} Elegant {keyword} Inspirations",
-    "High-End {keyword} Ideas for a Premium Look",
-    "Sophisticated {keyword} Styles That Feel Expensive",
-    "{power} Luxury {keyword} Designs",
-    "Minimalist {keyword} Ideas That Look Rich",
-    "{number} Upscale {keyword} Concepts",
-    "Pinterest-Worthy Luxury {keyword}",
-    "The Most Elegant {keyword} Setups",
-    "{number} Premium {keyword} Aesthetics",
-    "Timeless {keyword}: {number} Classic Elegance Ideas",
-    "Elevated {keyword}: {number} Luxury Upgrades",
-    "The Art of {keyword}: {number} Refined Ideas",
-    "{number} Chic {keyword} Styles for Discerning Tastes",
-    "Luxury Living: {number} {keyword} Essentials"
+  emotionalWords: [
+    "Obsessed", "Addictive", "Genius", "Life-Changing", "Mind-Blowing",
+    "Breathtaking", "Gorgeous", "Irresistible", "Stunning", "Amazing"
   ],
-  budget: [
-    "{number} Budget {keyword} Ideas That Look Expensive",
-    "Cheap {keyword} Hacks That Actually Work",
-    "Affordable {keyword} Ideas You'll Love",
-    "{number} Smart Ways to Save Money on {keyword}",
-    "DIY {keyword} on a Tiny Budget",
-    "{power} Budget {keyword} Tips",
-    "{number} Budget-Friendly {keyword} Setups",
-    "The Cheapest Way to Upgrade Your {keyword}",
-    "Frugal {keyword} Ideas That Look Amazing",
-    "{number} Free {keyword} Ideas Worth Trying",
-    "How to {keyword} Without Breaking the Bank",
-    "{number} Steal-Worthy {keyword} Ideas Under $50",
-    "Thrifty {keyword}: {number} Affordable Solutions",
-    "Save Big on {keyword}: {number} Proven Ways",
-    "{number} No-Cost {keyword} Ideas"
+  productivityWords: [
+    "Efficient", "Smart", "Proven", "Effective", "Organized",
+    "Streamlined", "Optimized", "Productive", "Powerful", "Strategic"
+  ],
+  cozyWords: [
+    "Cozy", "Warm", "Comfortable", "Inviting", "Snug",
+    "Homey", "Relaxing", "Peaceful", "Serene", "Restful"
+  ],
+  pinterestNativeWords: [
+    "Ideas", "Inspo", "Guide", "Tutorial", "Tips",
+    "Hacks", "Secrets", "Tricks", "Save This", "DIY"
+  ],
+  creatorWords: [
+    "Creator", "Inspired", "Designed", "Crafted", "Curated",
+    "Thoughtful", "Intentional", "Authentic", "Unique", "Original"
+  ],
+  engagementWords: [
+    "Save This", "Pin Now", "Share", "Tag A Friend", "Tell Us",
+    "Let Us Know", "Comment Below", "Drop A Pin", "Love This", "Bookmark"
+  ],
+  curiosityWords: [
+    "Discover", "Uncover", "Reveal", "Secret", "Hidden",
+    "Shocking", "Surprising", "Unexpected", "The Truth About", "Finally"
+  ],
+  minimalistWords: [
+    "Minimalist", "Clean", "Simple", "Essential", "Simplified",
+    "Streamlined", "Decluttered", "Modern", "Scandinavian", "Zen"
   ]
 };
+
+const INTENT_TEMPLATES = {
+  luxury: [
+    "Luxury {keyword}: {number} Elegant Ideas",
+    "{number} Upscale {keyword} Inspo for Premium Living",
+    "High-End {keyword} That Feel Expensive",
+    "Sophisticated {keyword} for Refined Taste",
+    "{keyword} Aesthetics: {number} Luxury Ideas",
+    "Timeless {keyword}: {number} Classic Designs",
+    "Elevated {keyword} for Discerning Creators",
+    "{number} Premium {keyword} Inspirations",
+    "Luxury Living: {keyword} Ideas You'll Love",
+    "The Art of {keyword}: {number} Refined Ideas"
+  ],
+  aesthetic: [
+    "{keyword} Aesthetic: {number} Inspo Ideas",
+    "{number} Beautiful {keyword} You'll Save Forever",
+    "Curated {keyword} Inspo for Your Vibe",
+    "Pinterest-Worthy {keyword} Ideas",
+    "{number} Stunning {keyword} Aesthetics",
+    "Visual {keyword} Inspo That Inspires",
+    "{keyword}: {number} Mood-Board Ideas",
+    "Dreamy {keyword} You'll Want to Pin",
+    "{number} Gorgeous {keyword} Concepts",
+    "Aesthetic {keyword}: {number} Beautiful Ideas"
+  ],
+  cozy: [
+    "Cozy {keyword} Ideas You'll Adore",
+    "{number} Warm {keyword} Inspo",
+    "Create Comfort: {keyword} Ideas",
+    "{number} Inviting {keyword} Designs",
+    "Cozy Living: {keyword} Inspo",
+    "Warm & Welcoming {keyword} Ideas",
+    "{number} Peaceful {keyword} Aesthetics",
+    "The Coziest {keyword} Ideas",
+    "Snug & Comfortable: {keyword}",
+    "{number} Serene {keyword} Inspirations"
+  ],
+  minimalist: [
+    "Minimalist {keyword}: {number} Clean Ideas",
+    "{number} Simple {keyword} for Modern Living",
+    "Streamlined {keyword} Ideas",
+    "Minimal {keyword}: {number} Essential Designs",
+    "{number} Decluttered {keyword} Aesthetics",
+    "Simple & Stylish: {keyword} Ideas",
+    "Modern Minimal {keyword}: {number} Ideas",
+    "Clean {keyword} That Look Expensive",
+    "{number} Zen {keyword} Concepts",
+    "Less Is More: {keyword} Ideas"
+  ],
+  productivity: [
+    "{number} Productivity {keyword} Hacks",
+    "Optimize Your {keyword} in {number} Steps",
+    "Smart {keyword} Ideas for Efficiency",
+    "{number} Proven {keyword} Systems",
+    "Boost {keyword} With These {number} Tips",
+    "Efficient {keyword} Setup Ideas",
+    "{number} Powerful {keyword} Strategies",
+    "Streamline Your {keyword}: {number} Ways",
+    "Strategic {keyword} for Results",
+    "{number} Game-Changing {keyword} Ideas"
+  ],
+  study: [
+    "{number} Study {keyword} Ideas That Work",
+    "Focus: {number} {keyword} Setup Ideas",
+    "Productive {keyword} for Students",
+    "{number} Study-Friendly {keyword} Designs",
+    "Ultimate Study {keyword} Guide",
+    "{number} Organized {keyword} Solutions",
+    "Ace It: {keyword} Inspo for Success",
+    "{number} Distraction-Free {keyword} Ideas",
+    "Study Smart: {keyword} Tips",
+    "Focused {keyword} for Better Results"
+  ],
+  smallspace: [
+    "{number} Small {keyword} Ideas That Maximize Space",
+    "Tiny {keyword}: {number} Space-Saving Ideas",
+    "Apartment {keyword}: {number} Ideas",
+    "{number} Clever {keyword} for Small Spaces",
+    "Small Space {keyword} Solutions",
+    "Maximize Your {keyword} in Tiny Spaces",
+    "{number} Multifunctional {keyword} Ideas",
+    "Studio {keyword}: {number} Ideas",
+    "Compact {keyword} That Feel Spacious",
+    "{number} Smart {keyword} for Small Living"
+  ],
+  gaming: [
+    "Gaming {keyword}: {number} Setup Ideas",
+    "{number} Epic {keyword} for Gamers",
+    "Ultimate Gaming {keyword} Guide",
+    "Streamer {keyword}: {number} Ideas",
+    "{number} Next-Level Gaming {keyword}",
+    "Pro Gaming {keyword} Setups",
+    "Gaming Station {keyword} Ideas",
+    "{number} Immersive {keyword} Designs",
+    "Level Up Your {keyword}",
+    "{number} Professional Gaming {keyword} Ideas"
+  ],
+  wedding: [
+    "{number} {keyword} Ideas for Your Wedding",
+    "Gorgeous {keyword} for Big Day Inspo",
+    "{number} Wedding {keyword} Inspirations",
+    "Dreamy {keyword} for Weddings",
+    "{number} Elegant {keyword} Wedding Ideas",
+    "Wedding Planning: {keyword} Inspo",
+    "Romantic {keyword} Ideas",
+    "{number} Pinterest-Worthy {keyword} for Weddings",
+    "Picture-Perfect {keyword} Ideas",
+    "{number} Stunning {keyword} Wedding Inspo"
+  ],
+  fashion: [
+    "{number} {keyword} Ideas You'll Love",
+    "Style Inspo: {keyword} Ideas",
+    "{number} Trendy {keyword} Looks",
+    "Fashion {keyword}: {number} Ideas",
+    "{number} Chic {keyword} Inspirations",
+    "Wear {keyword} Like A Pro",
+    "{number} Gorgeous {keyword} Outfits",
+    "{keyword} Aesthetic: {number} Ideas",
+    "{number} Fashion-Forward {keyword}",
+    "Slay: {number} {keyword} Ideas"
+  ],
+  beauty: [
+    "{number} {keyword} Ideas for Glowing Skin",
+    "Beauty {keyword}: {number} Tips",
+    "{number} Professional {keyword} Looks",
+    "Get Ready: {keyword} Ideas",
+    "Gorgeous {keyword} Tutorials",
+    "{number} Stunning {keyword} Inspo",
+    "Master {keyword} in {number} Steps",
+    "{number} Trending {keyword} Looks",
+    "Self-Care {keyword} Ideas",
+    "{number} Beautiful {keyword} Inspirations"
+  ],
+  business: [
+    "{number} {keyword} Tips for Success",
+    "Grow Your Business: {keyword}",
+    "{number} Proven {keyword} Strategies",
+    "Business {keyword} That Work",
+    "{number} Smart {keyword} Ideas",
+    "Entrepreneur {keyword} Hacks",
+    "{number} Game-Changing {keyword}",
+    "Scale Your Business: {keyword}",
+    "{number} Strategic {keyword} Moves",
+    "Business {keyword}: The Complete Guide"
+  ],
+  fitness: [
+    "{number} {keyword} Workouts That Work",
+    "Fitness {keyword}: {number} Ideas",
+    "Get Fit: {keyword} Tips",
+    "{number} Effective {keyword} Routines",
+    "Transform: {keyword} in {number} Weeks",
+    "{number} No-Equipment {keyword} Ideas",
+    "Home {keyword} Routines",
+    "Strength {keyword}: {number} Ideas",
+    "{number} Quick {keyword} Workouts",
+    "Achieve Goals: {keyword} Plan"
+  ],
+  food: [
+    "{number} {keyword} Recipes You'll Make",
+    "Delicious {keyword}: {number} Ideas",
+    "{keyword} Inspo: {number} Easy Recipes",
+    "{number} Trending {keyword} Ideas",
+    "Food Inspo: {keyword}",
+    "{number} {keyword} Ideas for Dinner",
+    "Healthy {keyword} Recipes",
+    "{number} Quick {keyword} Ideas",
+    "Pinterest {keyword} Favorites",
+    "{number} Must-Try {keyword} Ideas"
+  ],
+  diy: [
+    "DIY {keyword}: {number} Easy Ideas",
+    "{number} DIY {keyword} Projects",
+    "Make {keyword} Yourself",
+    "{number} Budget {keyword} DIY Ideas",
+    "Craft {keyword}: {number} Tutorials",
+    "DIY {keyword} for Beginners",
+    "{number} Creative {keyword} Projects",
+    "Homemade {keyword} Ideas",
+    "{number} Simple {keyword} DIY Hacks",
+    "Create Your Own {keyword}"
+  ],
+  homedecor: [
+    "{number} {keyword} Ideas for Every Room",
+    "Home Inspo: {keyword}",
+    "{number} Beautiful {keyword} Designs",
+    "Decorate With {keyword}: {number} Ideas",
+    "{number} {keyword} That Transform Spaces",
+    "Room Makeover: {keyword} Ideas",
+    "{number} Stylish {keyword} Inspirations",
+    "Interior {keyword}: {number} Ideas",
+    "{number} Modern {keyword} Designs",
+    "Home Sweet Home: {keyword} Ideas"
+  ],
+  creatoreconomy: [
+    "{number} Creator {keyword} Tips",
+    "Grow as a Creator: {keyword}",
+    "{number} {keyword} Strategies for Success",
+    "Creator {keyword} That Convert",
+    "{number} Content {keyword} Ideas",
+    "Build Your Brand: {keyword}",
+    "{number} {keyword} for Content Creators",
+    "Creator {keyword} Hacks",
+    "{number} Proven {keyword} for Growth",
+    "Level Up: {keyword} for Creators"
+  ],
+  blogging: [
+    "{number} Blog {keyword} Tips",
+    "Grow Your Blog: {keyword}",
+    "{number} {keyword} Strategies for Bloggers",
+    "Blog Traffic: {keyword} Ideas",
+    "{number} Effective {keyword} for Blogs",
+    "Blogger {keyword} That Convert",
+    "{number} SEO {keyword} Tips",
+    "Content {keyword}: {number} Ideas",
+    "{number} {keyword} to Boost Traffic",
+    "Blogging {keyword}: The Guide"
+  ]
+};
+
+const NUMBERS = [5, 7, 9, 10, 12, 15, 20, 25, 30, 50];
 
 const TRENDING_KEYWORDS = [
   "small bedroom ideas", "study table setup", "cozy apartment decor",
@@ -177,6 +348,9 @@ const PROGRAMMATIC_TOPICS = [
   "home-office-aesthetic"
 ];
 
+// Gibberish detection whitelist — common short keywords
+const GIBBERISH_WHITELIST = ["ai", "vr", "ux", "ui", "gym", "crypto", "nft", "diy"];
+
 // ============================================================
 // SESSION DATA
 // ============================================================
@@ -194,6 +368,7 @@ const sessionData = {
 
 let currentTitles = [];
 let currentKeyword = "";
+let validationMessage = "";
 
 // ============================================================
 // DOM REFERENCES
@@ -209,10 +384,11 @@ const copyAllBtn       = document.getElementById("copy-all-btn");
 const exportBtn        = document.getElementById("export-btn");
 const mobileMenuBtn    = document.getElementById("mobile-menu-btn");
 const mobileMenu       = document.getElementById("mobile-menu");
+const validationBox    = document.getElementById("validation-message");
 
 // ============================================================
 // UTILITIES
-// ============////////////////////////////////////////////////
+// ============================================================
 
 function getRandom(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -228,120 +404,280 @@ function analyticsEvent(eventName, params = {}) {
   }
 }
 
-// ============================================================
-// SCORING ENGINES
-// ============================================================
-
-function calculateSEOScore(title) {
-  let score = 50;
-  if (title.length >= 40 && title.length <= 70) score += 20;
-  POWER_WORDS.forEach(word => { if (title.includes(word)) score += 10; });
-  if (/\d/.test(title)) score += 10;
-  if (/How|Guide|Ideas/i.test(title)) score += 10;
-  return Math.min(score, 100);
-}
-
-function getCTRLabel(score) {
-  if (score >= 90) return "Very High";
-  if (score >= 75) return "High";
-  if (score >= 60) return "Medium";
-  return "Low";
-}
-
-function calculateUniqueness(title) {
-  const commonWords = ["ideas", "tips", "guide", "best", "easy", "viral"];
-  let uniqueness = 100;
-  commonWords.forEach(word => { if (title.toLowerCase().includes(word)) uniqueness -= 5; });
-  if (title.length > 60) uniqueness += 5;
-  if (/\d/.test(title)) uniqueness += 5;
-  return Math.max(50, uniqueness);
-}
-
-function emotionalScore(title) {
-  const emotionalWords = [
-    "secret", "viral", "easy", "genius", "stunning",
-    "luxury", "proven", "addictive", "beautiful", "amazing"
-  ];
-  let score = 0;
-  emotionalWords.forEach(word => { if (title.toLowerCase().includes(word)) score += 10; });
-  return Math.min(score, 100);
-}
-
-function analyzeTitle(title) {
-  return {
-    length: title.length,
-    containsNumber: /\d/.test(title),
-    containsPowerWord: POWER_WORDS.some(w => title.includes(w)),
-    readability: title.length < 70 ? "Good" : "Too Long"
-  };
-}
-
-function getTitleQuality(title) {
-  const a = analyzeTitle(title);
-  let score = 0;
-  if (a.containsNumber) score += 30;
-  if (a.containsPowerWord) score += 30;
-  if (a.readability === "Good") score += 40;
-  if (score >= 90) return "Excellent";
-  if (score >= 70) return "Strong";
-  if (score >= 50) return "Moderate";
-  return "Weak";
-}
-
-function getPerformanceBadge(score) {
-  if (score >= 90) return `<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">🚀 High Ranking Potential</span>`;
-  if (score >= 75) return `<span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">📈 Strong CTR Potential</span>`;
-  return `<span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-xs font-semibold">⚡ Moderate Performance</span>`;
+function showValidationMessage(message, type = "error") {
+  validationMessage = message;
+  if (validationBox) {
+    validationBox.innerHTML = `
+      <div class="bg-${type === 'error' ? 'red' : 'blue'}-50 border border-${type === 'error' ? 'red' : 'blue'}-200 text-${type === 'error' ? 'red' : 'blue'}-700 px-4 py-3 rounded-lg text-sm">
+        ${type === 'error' ? '❌' : 'ℹ️'} ${message}
+      </div>`;
+    setTimeout(() => {
+      if (validationBox) validationBox.innerHTML = '';
+    }, 5000);
+  }
 }
 
 // ============================================================
-// KEYWORD INTENT DETECTION
+// KEYWORD VALIDATION & CLEANING
+// ============================================================
+
+function isGibberish(keyword) {
+  const trimmed = keyword.toLowerCase().trim();
+  
+  // Whitelist short keywords
+  if (GIBBERISH_WHITELIST.includes(trimmed)) return false;
+  
+  // Reject purely numeric
+  if (/^\d+$/.test(trimmed)) return true;
+  
+  // Reject excessive repeated characters
+  if (/(.)\1{4,}/.test(trimmed)) return true;
+  
+  // For short keywords, allow them if they have vowels
+  if (trimmed.length <= 3) {
+    return !/[aeiou]/i.test(trimmed);
+  }
+  
+  // For longer keywords, check vowel density (softer: 15% instead of 20%)
+  const vowels = trimmed.match(/[aeiou]/gi) || [];
+  if (vowels.length < trimmed.length * 0.15) return true;
+  
+  // Reject pure keyboard mashing patterns
+  if (/^[^a-z]*$/.test(trimmed)) return true;
+  
+  return false;
+}
+
+function cleanKeyword(keyword) {
+  return keyword
+    .trim()
+    .replace(/\s+/g, " ")
+    .replace(/[^a-zA-Z0-9\s\-&]/g, "")
+    .split(" ")
+    .filter((word, idx, arr) => arr.indexOf(word) === idx)
+    .join(" ")
+    .trim();
+}
+
+function validateKeyword(keyword) {
+  const cleaned = cleanKeyword(keyword);
+  
+  if (!cleaned || cleaned.length < 2) {
+    return { valid: false, message: "Please enter at least 2 characters." };
+  }
+  
+  if (cleaned.length > 100) {
+    return { valid: false, message: "Keyword is too long. Keep it under 100 characters." };
+  }
+  
+  if (isGibberish(cleaned)) {
+    return { valid: false, message: "This looks like gibberish. Try a real keyword like 'cozy bedroom' or 'study desk setup'." };
+  }
+  
+  return { valid: true, cleaned };
+}
+
+// ============================================================
+// KEYWORD INTENT DETECTION (ADVANCED)
 // ============================================================
 
 function detectKeywordIntent(keyword) {
   const lower = keyword.toLowerCase();
-  if (/luxury|premium|elegant/.test(lower)) return "luxury";
-  if (/cheap|budget|affordable/.test(lower)) return "budget";
-  if (/trend|viral|popular/.test(lower)) return "trending";
-  if (/how|guide|tutorial/.test(lower)) return "practical";
-  return "motivational";
+  
+  // Luxury/Premium
+  if (/luxury|premium|elegant|upscale|high.end|refined|sophisticated|opulent/i.test(lower)) return "luxury";
+  
+  // Aesthetic
+  if (/aesthetic|dreamy|visual|inspo|mood.board|vibe|style|design/i.test(lower)) return "aesthetic";
+  
+  // Cozy
+  if (/cozy|cosy|warm|comfortable|inviting|snug|homey|relaxing|peaceful/i.test(lower)) return "cozy";
+  
+  // Minimalist
+  if (/minimal|minimalist|clean|simple|declutter|zen|modern|scandinavian/i.test(lower)) return "minimalist";
+  
+  // Productivity/Study
+  if (/productivity|productive|study|desk|workspace|efficient|focus|organized/i.test(lower)) return "productivity";
+  if (/study|exam|student|school|learning|thesis|course/i.test(lower)) return "study";
+  
+  // Small Space
+  if (/small|tiny|apartment|studio|compact|maximize|space.saving/i.test(lower)) return "smallspace";
+  
+  // Gaming
+  if (/gaming|gamer|stream|twitch|esports|console|pc.gaming/i.test(lower)) return "gaming";
+  
+  // Wedding
+  if (/wedding|bride|groom|marriage|engagement|honeymoon|ceremony/i.test(lower)) return "wedding";
+  
+  // Fashion
+  if (/fashion|outfit|clothes|style|wear|dress|wardrobe|look/i.test(lower)) return "fashion";
+  
+  // Beauty
+  if (/beauty|makeup|skin|hair|cosmetics|skincare|glow|face/i.test(lower)) return "beauty";
+  
+  // Business
+  if (/business|entrepreneurship|startup|growth|marketing|sales|strategy|leadership/i.test(lower)) return "business";
+  
+  // Fitness
+  if (/fitness|workout|exercise|gym|health|training|diet|strength/i.test(lower)) return "fitness";
+  
+  // Food
+  if (/recipe|food|cook|meal|cuisine|eating|dessert|breakfast|lunch|dinner/i.test(lower)) return "food";
+  
+  // DIY
+  if (/diy|craft|make|build|project|tutorial|homemade/i.test(lower)) return "diy";
+  
+  // Home Decor
+  if (/decor|decoration|interior|home|room|furniture|design|wall/i.test(lower)) return "homedecor";
+  
+  // Creator Economy
+  if (/creator|content.creator|influencer|youtube|tiktok|instagram|grow.your|personal.brand/i.test(lower)) return "creatoreconomy";
+  
+  // Blogging
+  if (/blog|blogger|content|traffic|seo|affiliate|passive.income/i.test(lower)) return "blogging";
+  
+  // Default to blogging
+  return "blogging";
 }
 
 // ============================================================
-// GENERATION ENGINE
+// SCORING ENGINES (ENHANCED)
+// ============================================================
+
+function calculateCompositeScore(title, keyword) {
+  let score = 0;
+  
+  // Length score (40-70 chars is sweet spot)
+  const length = title.length;
+  if (length >= 40 && length <= 70) score += 25;
+  else if (length >= 35 && length <= 75) score += 15;
+  
+  // Power word bonus
+  const powerWords = Object.values(SEMANTIC_WORD_BANKS).flat();
+  const powerWordCount = powerWords.filter(w => title.toLowerCase().includes(w.toLowerCase())).length;
+  score += Math.min(powerWordCount * 10, 25);
+  
+  // Number presence
+  if (/\d/.test(title)) score += 15;
+  
+  // Keyword presence
+  if (title.toLowerCase().includes(keyword.toLowerCase())) score += 20;
+  
+  // Question format
+  if (title.includes("?")) score += 5;
+  
+  // Colon usage (helps structure)
+  if (title.includes(":")) score += 5;
+  
+  return Math.min(score, 100);
+}
+
+function calculateCuriosity(title) {
+  const curiosityTriggers = [
+    "secret", "hidden", "reveal", "shocking", "surprising",
+    "discover", "uncover", "finally", "truth", "nobody"
+  ];
+  
+  let score = 0;
+  curiosityTriggers.forEach(trigger => {
+    if (title.toLowerCase().includes(trigger)) score += 15;
+  });
+  
+  return Math.min(score, 100);
+}
+
+function calculateEmotional(title) {
+  const emotionalKeywords = Object.values(SEMANTIC_WORD_BANKS)
+    .filter(arr => arr !== SEMANTIC_WORD_BANKS.pinterestNativeWords)
+    .flat();
+  
+  let score = 0;
+  emotionalKeywords.forEach(word => {
+    if (title.toLowerCase().includes(word.toLowerCase())) score += 5;
+  });
+  
+  return Math.min(score, 100);
+}
+
+function calculateQuality(title) {
+  let score = 0;
+  
+  // Perfect length
+  if (title.length >= 40 && title.length <= 70) score += 30;
+  
+  // Has power words
+  const powerWords = Object.values(SEMANTIC_WORD_BANKS).flat();
+  if (powerWords.some(w => title.toLowerCase().includes(w.toLowerCase()))) score += 30;
+  
+  // Has number
+  if (/\d/.test(title)) score += 20;
+  
+  // Good readability
+  if (title.split(" ").length >= 4 && title.split(" ").length <= 12) score += 20;
+  
+  return Math.min(score, 100);
+}
+
+function getTitleQualityBadge(score) {
+  if (score >= 85) return "💎 Premium";
+  if (score >= 70) return "⭐ Strong";
+  if (score >= 55) return "✓ Good";
+  return "○ Fair";
+}
+
+// ============================================================
+// GENERATION ENGINE (INTELLIGENT)
 // ============================================================
 
 function generateTitles(keyword, selectedTone = null) {
-  if (!keyword.trim()) {
-    alert("Please enter a keyword.");
+  // Validate keyword
+  const validation = validateKeyword(keyword);
+  if (!validation.valid) {
+    showValidationMessage(validation.message);
     return [];
   }
-
-  const tone = selectedTone || detectKeywordIntent(keyword);
-  const templates = TITLE_TEMPLATES[tone] || TITLE_TEMPLATES.motivational;
-  const titles = [];
-  const used = new Set();
-
-  while (titles.length < 15) {
-    const index = Math.floor(Math.random() * templates.length);
-    if (used.has(index)) continue;
-    used.add(index);
-
-    const title = templates[index]
-      .replace(/{keyword}/g, keyword)
+  
+  const cleanedKeyword = validation.cleaned;
+  const intent = selectedTone || detectKeywordIntent(cleanedKeyword);
+  const templates = INTENT_TEMPLATES[intent] || INTENT_TEMPLATES.blogging;
+  
+  const allTitles = [];
+  const usedIndices = new Set();
+  
+  // Generate 20 internally
+  while (allTitles.length < 20) {
+    const idx = Math.floor(Math.random() * templates.length);
+    if (usedIndices.has(idx)) continue;
+    usedIndices.add(idx);
+    
+    const template = templates[idx];
+    const title = template
+      .replace(/{keyword}/g, cleanedKeyword)
       .replace(/{number}/g, getRandom(NUMBERS))
-      .replace(/{power}/g, getRandom(POWER_WORDS));
-
-    const seoScore = calculateSEOScore(title);
-
-    titles.push({
+      .split("{")
+      .map(part => {
+        if (part.includes("}")) {
+          const key = part.split("}")[0];
+          const bank = SEMANTIC_WORD_BANKS[key + "Words"] || SEMANTIC_WORD_BANKS.emotionalWords;
+          return getRandom(bank) + part.substring(key.length + 1);
+        }
+        return part;
+      })
+      .join("");
+    
+    allTitles.push({
       text: title,
-      seoScore,
-      ctr: getCTRLabel(seoScore)
+      quality: calculateQuality(title),
+      curiosity: calculateCuriosity(title),
+      emotional: calculateEmotional(title),
+      composite: calculateCompositeScore(title, cleanedKeyword)
     });
   }
-
-  return titles;
+  
+  // Sort by composite score, return top 10
+  const sorted = allTitles.sort((a, b) => b.composite - a.composite).slice(0, 10);
+  
+  return sorted;
 }
 
 // ============================================================
@@ -364,12 +700,12 @@ function displayHistory() {
   if (!historyContainer) return;
   const history = loadHistory();
   historyContainer.innerHTML = "";
-
+  
   if (history.length === 0) {
     historyContainer.innerHTML = '<p class="text-sm text-gray-600">No recent searches yet</p>';
     return;
   }
-
+  
   history.forEach(item => {
     const btn = document.createElement("button");
     btn.className = "bg-gray-100 hover:bg-pink-100 text-gray-800 px-3 py-1 rounded-full text-sm transition";
@@ -410,7 +746,7 @@ async function copyToClipboard(text, button) {
     document.execCommand("copy");
     document.body.removeChild(ta);
   }
-
+  
   const original = button.innerHTML;
   button.innerHTML = "✓ Copied";
   button.classList.add("bg-green-600");
@@ -451,12 +787,8 @@ function displayTitles(titles, keyword) {
   if (!titlesContainer) return;
   titlesContainer.innerHTML = "";
   currentTitles = titles;
-
+  
   titles.forEach((item, index) => {
-    const uniqueness = calculateUniqueness(item.text);
-    const emotion = emotionalScore(item.text);
-    const quality = getTitleQuality(item.text);
-
     const card = document.createElement("div");
     card.className = "bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all";
     card.innerHTML = `
@@ -466,20 +798,19 @@ function displayTitles(titles, keyword) {
           <button class="copy-btn flex-shrink-0 bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-lg text-sm font-semibold"
             data-title="${item.text.replace(/"/g, '&quot;')}">📋 Copy</button>
         </div>
-
+        
         <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
-          <div class="bg-pink-100 text-pink-700 px-3 py-2 rounded-full">SEO: ${item.seoScore}/100</div>
-          <div class="bg-blue-100 text-blue-700 px-3 py-2 rounded-full">CTR: ${item.ctr}</div>
-          <div class="bg-green-100 text-green-700 px-3 py-2 rounded-full">Unique: ${uniqueness}/100</div>
-          <div class="bg-yellow-100 text-yellow-700 px-3 py-2 rounded-full">Emotion: ${emotion}/100</div>
+          <div class="bg-pink-100 text-pink-700 px-3 py-2 rounded-full">Quality: ${item.quality}/100</div>
+          <div class="bg-blue-100 text-blue-700 px-3 py-2 rounded-full">Curiosity: ${item.curiosity}/100</div>
+          <div class="bg-green-100 text-green-700 px-3 py-2 rounded-full">Emotion: ${item.emotional}/100</div>
+          <div class="bg-yellow-100 text-yellow-700 px-3 py-2 rounded-full">Score: ${item.composite}/100</div>
         </div>
-
+        
         <div class="flex flex-wrap gap-2 items-center">
-          ${getPerformanceBadge(item.seoScore)}
-          <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs">Quality: ${quality}</span>
+          <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">${getTitleQualityBadge(item.composite)}</span>
           <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">${item.text.length} chars</span>
         </div>
-
+        
         <div class="flex flex-wrap gap-2">
           <button class="save-favorite-btn text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-full" data-index="${index}">⭐ Save</button>
           <button class="gen-description-btn text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-full" data-keyword="${keyword}">📝 Description</button>
@@ -489,7 +820,7 @@ function displayTitles(titles, keyword) {
     `;
     titlesContainer.appendChild(card);
   });
-
+  
   // Copy individual title
   titlesContainer.querySelectorAll(".copy-btn").forEach(btn => {
     btn.addEventListener("click", function () {
@@ -498,7 +829,7 @@ function displayTitles(titles, keyword) {
       analyticsEvent("copy_title", { event_label: this.dataset.title });
     });
   });
-
+  
   // Save favorite
   titlesContainer.querySelectorAll(".save-favorite-btn").forEach(btn => {
     btn.addEventListener("click", function () {
@@ -508,7 +839,7 @@ function displayTitles(titles, keyword) {
       analyticsEvent("save_favorite");
     });
   });
-
+  
   // Generate description
   titlesContainer.querySelectorAll(".gen-description-btn").forEach(btn => {
     btn.addEventListener("click", async function () {
@@ -517,7 +848,7 @@ function displayTitles(titles, keyword) {
       this.innerHTML = "✓ Copied Description";
     });
   });
-
+  
   // Generate hashtags
   titlesContainer.querySelectorAll(".gen-hashtags-btn").forEach(btn => {
     btn.addEventListener("click", async function () {
@@ -526,7 +857,7 @@ function displayTitles(titles, keyword) {
       this.innerHTML = "✓ Copied Hashtags";
     });
   });
-
+  
   if (resultsSection) {
     resultsSection.classList.remove("hidden");
     resultsSection.scrollIntoView({ behavior: "smooth" });
@@ -540,27 +871,39 @@ function displayTitles(titles, keyword) {
 function generateTitlesHandler() {
   const keyword = keywordInput?.value.trim();
   const selectedTone = toneSelect?.value;
-
+  
   if (!keyword) {
+    showValidationMessage("Please enter a keyword to generate titles.", "error");
     keywordInput?.focus();
     return;
   }
-
+  
   currentKeyword = keyword;
   generateBtn.disabled = true;
-  generateBtn.innerHTML = "Generating...";
-
+  generateBtn.innerHTML = "Analyzing keyword intent...";
+  
   setTimeout(() => {
-    const titles = generateTitles(keyword, selectedTone);
-    displayTitles(titles, keyword);
-    saveToHistory(keyword);
-    displayHistory();
-
-    sessionData.generatedCount++;
-    generateBtn.disabled = false;
-    generateBtn.innerHTML = "✨ Generate 15 Titles";
-
-    analyticsEvent("generate_titles", { event_label: keyword });
+    generateBtn.innerHTML = "Optimizing Pinterest SEO...";
+    
+    setTimeout(() => {
+      const titles = generateTitles(keyword, selectedTone);
+      
+      if (titles.length === 0) {
+        generateBtn.disabled = false;
+        generateBtn.innerHTML = "✨ Generate Titles";
+        return;
+      }
+      
+      displayTitles(titles, keyword);
+      saveToHistory(keyword);
+      displayHistory();
+      
+      sessionData.generatedCount++;
+      generateBtn.disabled = false;
+      generateBtn.innerHTML = "✨ Generate 10 Titles";
+      
+      analyticsEvent("generate_titles", { event_label: keyword });
+    }, 300);
   }, 300);
 }
 
@@ -581,13 +924,13 @@ function copyAllTitles() {
 
 function exportTitlesAsText() {
   if (!currentTitles.length) return;
-
+  
   const content = currentTitles
     .map((item, i) =>
-      `${i + 1}. ${item.text}\nSEO Score: ${item.seoScore}/100\nCTR Potential: ${item.ctr}\n`
+      `${i + 1}. ${item.text}\nQuality Score: ${item.quality}/100\nCuriosity: ${item.curiosity}/100\nEmotional: ${item.emotional}/100\n`
     )
     .join("\n");
-
+  
   const blob = new Blob([content], { type: "text/plain" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
@@ -597,7 +940,7 @@ function exportTitlesAsText() {
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
-
+  
   analyticsEvent("export_titles");
 }
 
@@ -609,7 +952,7 @@ function displayTrendingKeywords() {
   const container = document.getElementById("trending-keywords");
   if (!container) return;
   container.innerHTML = "";
-
+  
   TRENDING_KEYWORDS.forEach(keyword => {
     const btn = document.createElement("button");
     btn.className = "bg-gradient-to-r from-pink-100 to-purple-100 hover:from-pink-200 hover:to-purple-200 text-gray-800 text-sm px-4 py-2 rounded-full transition";
@@ -629,7 +972,7 @@ function displayTrendingKeywords() {
 function rotateSEOTips() {
   const container = document.getElementById("seo-tip-box");
   if (!container) return;
-
+  
   let index = 0;
   const render = () => {
     container.innerHTML = `
@@ -638,27 +981,9 @@ function rotateSEOTips() {
       </div>`;
     index = (index + 1) % PINTEREST_TIPS.length;
   };
-
+  
   render();
   setInterval(render, 5000);
-}
-
-// ============================================================
-// LIVE USER COUNTER (social proof)
-// ============================================================
-
-function updateLiveCounter() {
-  const counter = document.getElementById("live-user-count");
-  if (!counter) return;
-
-  let count = Math.floor(Math.random() * 40) + 20;
-  counter.textContent = `${count} creators using this tool`;
-
-  setInterval(() => {
-    count += Math.floor(Math.random() * 5) - 2;
-    if (count < 18) count = 18;
-    counter.textContent = `${count} creators using this tool`;
-  }, 8000);
 }
 
 // ============================================================
@@ -667,7 +992,7 @@ function updateLiveCounter() {
 
 function showEmailCapture() {
   if (localStorage.getItem("emailPopupShown")) return;
-
+  
   const popup = document.createElement("div");
   popup.id = "email-popup";
   popup.className = "fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4";
@@ -686,23 +1011,26 @@ function showEmailCapture() {
         <p class="text-xs text-gray-500 mt-3">No spam. Creator-focused insights only.</p>
       </div>
     </div>`;
-
+  
   document.body.appendChild(popup);
   localStorage.setItem("emailPopupShown", "true");
-
+  
   document.getElementById("close-popup").addEventListener("click", () => popup.remove());
-
+  
   document.getElementById("email-submit").addEventListener("click", () => {
     const email = document.getElementById("email-input").value;
-    if (!email.includes("@")) { alert("Enter a valid email."); return; }
-
+    if (!email.includes("@")) {
+      showValidationMessage("Please enter a valid email address.", "error");
+      return;
+    }
+    
     popup.innerHTML = `
       <div class="bg-white rounded-3xl p-8 text-center">
         <div class="text-6xl mb-4">🎉</div>
         <h2 class="text-3xl font-bold mb-3">You're In!</h2>
         <p class="text-gray-600">Watch your inbox for Pinterest growth strategies.</p>
       </div>`;
-
+    
     analyticsEvent("email_signup", { event_category: "lead_generation" });
     setTimeout(() => popup.remove(), 2500);
   });
@@ -715,26 +1043,26 @@ function showEmailCapture() {
 function generateInternalLinks() {
   const section = document.getElementById("internal-linking");
   if (!section) return;
-
+  
   let html = `
     <div class="bg-white border border-gray-200 rounded-3xl p-8 mt-14 shadow-sm">
       <h2 class="text-3xl font-bold text-gray-900 mb-6">Learn Pinterest SEO Faster</h2>
       <div class="grid md:grid-cols-3 gap-8">`;
-
+  
   Object.entries(CONTENT_CLUSTERS).forEach(([cluster, articles]) => {
     html += `
       <div>
         <h3 class="font-bold text-xl mb-4 capitalize">${cluster.replace(/([A-Z])/g, " $1")}</h3>
         <div class="space-y-3">`;
-
+    
     articles.forEach(article => {
       const slug = article.replace(/\s+/g, "-").toLowerCase();
       html += `<a href="/blog/${slug}.html" class="block text-gray-700 hover:text-pink-600 transition">→ ${capitalizeWords(article)}</a>`;
     });
-
+    
     html += `</div></div>`;
   });
-
+  
   html += `</div></div>`;
   section.innerHTML = html;
 }
@@ -746,7 +1074,7 @@ function generateInternalLinks() {
 function injectRelatedTools() {
   const section = document.getElementById("related-tools");
   if (!section) return;
-
+  
   section.innerHTML = `
     <div class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-6 mt-10">
       <h3 class="text-2xl font-bold text-gray-900 mb-4">Continue Growing Your Pinterest Traffic</h3>
@@ -774,9 +1102,9 @@ function injectRelatedTools() {
 function renderFeaturedArticles() {
   const container = document.getElementById("featured-blog-posts");
   if (!container) return;
-
+  
   let html = `<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">`;
-
+  
   BLOG_SUGGESTIONS.forEach(post => {
     const slug = post.title.toLowerCase().replace(/[^\w\s]/g, "").replace(/\s+/g, "-");
     html += `
@@ -789,7 +1117,7 @@ function renderFeaturedArticles() {
         </div>
       </a>`;
   });
-
+  
   html += `</div>`;
   container.innerHTML = html;
 }
@@ -801,7 +1129,7 @@ function renderFeaturedArticles() {
 function renderAdvancedFAQs() {
   const container = document.getElementById("advanced-faqs");
   if (!container) return;
-
+  
   container.innerHTML = `<div class="space-y-4">` +
     ADVANCED_FAQS.map(item => `
       <details class="bg-white border border-gray-200 rounded-2xl p-5">
@@ -818,18 +1146,18 @@ function renderAdvancedFAQs() {
 function renderProgrammaticPages() {
   const container = document.getElementById("programmatic-pages");
   if (!container) return;
-
+  
   let html = `
     <div class="mt-14">
       <h2 class="text-3xl font-bold text-gray-900 mb-6">Popular Pinterest Search Topics</h2>
       <div class="flex flex-wrap gap-3">`;
-
+  
   PROGRAMMATIC_TOPICS.forEach(topic => {
     html += `<a href="/topics/${topic}.html"
       class="bg-gray-100 hover:bg-pink-100 hover:text-pink-700 px-4 py-2 rounded-full text-sm transition">
       ${capitalizeWords(topic.replace(/-/g, " "))}</a>`;
   });
-
+  
   html += `</div></div>`;
   container.innerHTML = html;
 }
@@ -849,7 +1177,7 @@ function injectSchemaMarkup() {
     "description": "Generate viral Pinterest titles instantly using SEO optimization and CTR psychology.",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   };
-
+  
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -859,7 +1187,7 @@ function injectSchemaMarkup() {
       "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
     }))
   };
-
+  
   [appSchema, faqSchema].forEach(schema => {
     const script = document.createElement("script");
     script.type = "application/ld+json";
@@ -982,14 +1310,13 @@ window.addEventListener("load", () => {
   displayHistory();
   displayTrendingKeywords();
   rotateSEOTips();
-  updateLiveCounter();
   injectSchemaMarkup();
   injectRelatedTools();
   generateInternalLinks();
   renderFeaturedArticles();
   renderAdvancedFAQs();
   renderProgrammaticPages();
-
+  
   setTimeout(() => keywordInput?.focus(), 600);
 });
 
@@ -999,6 +1326,6 @@ window.addEventListener("load", () => {
 
 console.log(`
 🚀 Elevate Living Co — Pinterest SEO Tools
-   Production Build — One Clean Architecture
+   Production Build — Advanced Intelligence Layer
    Built for creators, bloggers, and Pinterest growth.
 `);
