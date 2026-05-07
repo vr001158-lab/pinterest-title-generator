@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pinterest-title-generator.pages.dev/sitemap.xml
