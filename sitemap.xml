@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Tool -->
+  <url>
+    <loc>https://pinterest-title-generator.pages.dev/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Core Tools -->
+  <url>
+    <loc>https://pinterest-title-generator.pages.dev/description-optimizer.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://pinterest-title-generator.pages.dev/hashtag-generator.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://pinterest-title-generator.pages.dev/keyword-research.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://pinterest-title-generator.pages.dev/seo-checker.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Supporting Pinterest Tools -->
+  <url>
+    <loc>https://pinterest-title-generator.pages.dev/content-calendar.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pinterest-title-generator.pages.dev/best-practices.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pinterest-title-generator.pages.dev/creator-hub.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog + SEO -->
+  <url>
+    <loc>https://pinterest-title-generator.pages.dev/blog.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Trust Pages -->
+  <url>
+    <loc>https://pinterest-title-generator.pages.dev/about.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://pinterest-title-generator.pages.dev/contact.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://pinterest-title-generator.pages.dev/privacy.html</loc>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://pinterest-title-generator.pages.dev/terms.html</loc>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://pinterest-title-generator.pages.dev/faq.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
