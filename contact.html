@@ -79,12 +79,6 @@
             font-weight: 600;
         }
 
-        .contact-box a {
-            color: #9c27b0;
-            text-decoration: none;
-            font-weight: 700;
-        }
-
         .description {
             line-height: 1.6;
             color: var(--text-light);
@@ -101,6 +95,7 @@
             display: inline-block;
             transition: transform 0.2s ease;
             box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
+            white-space: nowrap; /* Keeps the email on one line with the text */
         }
 
         .btn:hover {
@@ -143,7 +138,12 @@
             respond to all inquiries within 24-48 hours.
         </p>
 
-        <a href="mailto:elevatelivingco7@gmail.com" class="btn">Email Us Directly →</a>
+        <!-- Updated Button with Gmail redirect and synced UI text -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=elevatelivingco7@gmail.com" 
+           target="_blank" 
+           class="btn">
+           Email Us Directly → elevatelivingco7@gmail.com
+        </a>
 
         <a href="index.html" class="back-link">← Back to Pinterest Title Generator</a>
     </div>
