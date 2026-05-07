@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate viral Pinterest titles instantly. Get 15+ SEO-optimized pin title ideas for your Pinterest pins. Free Pinterest title generator tool.">
+    <meta name="keywords" content="pinterest title generator, pinterest title ideas, viral pinterest titles, pinterest SEO titles, pin title ideas">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Free Pinterest Title Generator - Viral Pin Ideas">
+    <meta property="og:description" content="Generate SEO-optimized Pinterest titles instantly. 15+ viral pin title ideas that rank on Pinterest & Google.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/pinterest-title-generator">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Pinterest Title Generator">
+    <meta name="twitter:description" content="Get 15+ viral Pinterest titles instantly. SEO-optimized pin title ideas.">
+    
+    <!-- Canonical URL for SEO -->
+    <link rel="canonical" href="https://yourdomain.com/pinterest-title-generator">
+    
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Pinterest Title Generator",
+      "description": "Generate viral, SEO-optimized Pinterest titles instantly",
+      "url": "https://yourdomain.com/pinterest-title-generator",
+      "applicationCategory": "Productivity",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Your Brand",
+        "url": "https://yourdomain.com"
+      }
+    }
+    </script>
+
+    <title>Free Pinterest Title Generator | Viral Pin Title Ideas</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Critical rendering path - inline essential styles */
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Smooth transitions for interactive elements */
+        .transition-smooth {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        /* Copy animation */
+        @keyframes copyPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .copy-success {
+            animation: copyPulse 0.3s ease-in-out;
+        }
+        
+        /* Fade in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        /* Loading state */
+        .loading-spinner {
+            border: 2px solid #f3f4f6;
+            border-top: 2px solid #ec4899;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 0.8s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Focus visible for accessibility */
+        *:focus-visible {
+            outline: 2px solid #ec4899;
+            outline-offset: 2px;
+        }
+        
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f3f4f6;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-pink-50 via-white to-purple-50 min-h-screen">
+    
+    <!-- Skip to main content link (accessibility) -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-pink-600 focus:text-white focus:px-4 focus:py-2 focus:rounded">
+        Skip to main content
+    </a>
+
+    <!-- Header / Hero Section -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col gap-2">
+                <h1 class="text-2xl sm:text-3xl font-bold text-gray-900">
+                    Pinterest Title Generator
+                </h1>
+                <p class="text-sm sm:text-base text-gray-600">
+                    Generate viral, SEO-optimized pin titles in seconds
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        
+        <!-- Generator Section -->
+        <section class="bg-white rounded-lg shadow-lg p-6 sm:p-8 mb-12 fade-in" aria-labelledby="generator-heading">
+            <h2 id="generator-heading" class="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
+                Generate Your Pinterest Titles
+            </h2>
+
+            <!-- Input Section -->
+            <div class="space-y-4 mb-8">
+                <div>
+                    <label for="keyword-input" class="block text-sm font-semibold text-gray-700 mb-2">
+                        Your Keyword or Topic
+                    </label>
+                    <input
+                        type="text"
+                        id="keyword-input"
+                        placeholder="e.g., budget meal prep, home organizing, DIY decor"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-smooth"
+                        aria-describedby="keyword-help"
+                        aria-label="Enter your keyword or topic"
+                        maxlength="100"
+                    >
+                    <p id="keyword-help" class="text-xs text-gray-500 mt-1">
+                        Enter a keyword, topic, or niche for Pinterest pins (e.g., "wedding planning", "freelance writing")
+                    </p>
+                </div>
+
+                <!-- Advanced Options (Collapsible) -->
+                <details class="group border border-gray-200 rounded-lg p-4">
+                    <summary class="cursor-pointer flex justify-between items-center font-semibold text-gray-700 hover:text-pink-600 transition-smooth" role="button" tabindex="0">
+                        <span>Advanced Options</span>
+                        <span class="transform group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <div class="mt-4 space-y-4">
+                        <div>
+                            <label for="tone-select" class="block text-sm font-semibold text-gray-700 mb-2">
+                                Tone of Voice
+                            </label>
+                            <select id="tone-select" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 transition-smooth" aria-label="Select tone of voice">
+                                <option value="motivational">Motivational & Inspirational</option>
+                                <option value="practical">Practical & How-To</option>
+                                <option value="trending">Trending & Viral</option>
+                                <option value="luxury">Luxury & Premium</option>
+                                <option value="budget">Budget-Friendly</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="audience-select" class="block text-sm font-semibold text-gray-700 mb-2">
+                                Target Audience
+                            </label>
+                            <select id="audience-select" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 transition-smooth" aria-label="Select target audience">
+                                <option value="general">General</option>
+                                <option value="women">Women & Lifestyle</option>
+                                <option value="entrepreneurs">Entrepreneurs & Business</option>
+                                <option value="parents">Parents & Family</option>
+                                <option value="students">Students & Learners</option>
+                            </select>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Generate Button -->
+            <button
+                id="generate-btn"
+                class="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-smooth shadow-md hover:shadow-lg focus:ring-4 focus:ring-pink-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                aria-label="Generate 15 Pinterest titles"
+            >
+                <span id="btn-text">✨ Generate 15 Titles</span>
+                <span id="loading-spinner" class="hidden loading-spinner"></span>
+            </button>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" class="hidden mb-12" aria-labelledby="results-heading" aria-live="polite">
+            <div class="mb-6">
+                <h2 id="results-heading" class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
+                    Your Generated Titles
+                </h2>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button
+                        id="copy-all-btn"
+                        class="flex-1 sm:flex-none bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-smooth flex items-center justify-center gap-2"
+                        aria-label="Copy all titles to clipboard"
+                    >
+                        📋 Copy All
+                    </button>
+                    <button
+                        id="regenerate-btn"
+                        class="flex-1 sm:flex-none bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg transition-smooth"
+                        aria-label="Generate different titles with the same keyword"
+                    >
+                        🔄 Regenerate
+                    </button>
+                    <button
+                        id="clear-btn"
+                        class="flex-1 sm:flex-none bg-gray-400 hover:bg-gray-500 text-white font-semibold py-2 px-4 rounded-lg transition-smooth"
+                        aria-label="Clear all results and start over"
+                    >
+                        ✕ Clear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Titles Grid -->
+            <div id="titles-container" class="grid gap-2 mb-8">
+                <!-- Titles will be injected here -->
+            </div>
+
+            <!-- Try Another Keyword Button -->
+            <div class="mb-8">
+                <button
+                    id="try-another-btn"
+                    class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-smooth"
+                    aria-label="Try generating titles with another keyword"
+                >
+                    🔍 Try Another Keyword
+                </button>
+            </div>
+
+            <!-- Save History Section -->
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8">
+                <h3 class="font-semibold text-blue-900 mb-3">📌 Recent Searches</h3>
+                <div id="history-container" class="flex flex-wrap gap-2">
+                    <!-- Recent searches will be displayed here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section (SEO) -->
+        <section class="bg-white rounded-lg shadow-lg p-6 sm:p-8 mb-12" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" class="text-2xl font-bold text-gray-900 mb-6">
+                Frequently Asked Questions
+            </h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <details class="group border border-gray-200 rounded-lg p-4 transition-smooth hover:border-pink-300" open>
+                    <summary class="cursor-pointer flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth py-2" role="button" tabindex="0">
+                        <span>What is a Pinterest title generator?</span>
+                        <span class="transform group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        A Pinterest title generator is a tool that creates multiple viral, SEO-optimized pin titles instantly. Instead of struggling to come up with titles, you enter a keyword, and the tool generates 15+ title variations optimized for Pinterest search and Google visibility. This saves creators hours while improving pin performance.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 2 -->
+                <details class="group border border-gray-200 rounded-lg p-4 transition-smooth hover:border-pink-300">
+                    <summary class="cursor-pointer flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth py-2" role="button" tabindex="0">
+                        <span>How do Pinterest title ideas help with SEO?</span>
+                        <span class="transform group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Pinterest titles are indexed by Google and affect your pin's search ranking. Good titles include keywords, benefit statements, and numbers (which improve click-through rates). Our generator creates titles optimized for both Pinterest's search algorithm and Google SEO, helping your pins get discovered by more viewers organically.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="group border border-gray-200 rounded-lg p-4 transition-smooth hover:border-pink-300">
+                    <summary class="cursor-pointer flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth py-2" role="button" tabindex="0">
+                        <span>What makes a viral Pinterest title?</span>
+                        <span class="transform group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Viral Pinterest titles typically include: (1) Numbers or statistics, (2) Power words (amazing, proven, essential), (3) Benefit statements (what users will gain), (4) Keywords for searchability, and (5) Curiosity gaps. Our generator combines these elements to create titles with proven viral potential that drive saves, clicks, and shares.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 4 -->
+                <details class="group border border-gray-200 rounded-lg p-4 transition-smooth hover:border-pink-300">
+                    <summary class="cursor-pointer flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth py-2" role="button" tabindex="0">
+                        <span>Can I use these titles for multiple pins?</span>
+                        <span class="transform group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Yes! Our generated titles are completely free to use. You can apply them to multiple pins, use them across different boards, or modify them for your specific pins. Each title is unique and optimized, so mix and match to find what resonates best with your audience.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 5 -->
+                <details class="group border border-gray-200 rounded-lg p-4 transition-smooth hover:border-pink-300">
+                    <summary class="cursor-pointer flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth py-2" role="button" tabindex="0">
+                        <span>How often should I update my pin titles?</span>
+                        <span class="transform group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        You can edit pin titles on Pinterest anytime without harming engagement history. If a pin isn't performing well, try refreshing its title with a new variant. For seasonal or trending topics, update titles quarterly. Monitor your Pinterest Analytics to see which titles get the most saves and clicks.
+                    </p>
+                </details>
+
+                <!-- FAQ Item 6 -->
+                <details class="group border border-gray-200 rounded-lg p-4 transition-smooth hover:border-pink-300">
+                    <summary class="cursor-pointer flex justify-between items-center font-semibold text-gray-900 hover:text-pink-600 transition-smooth py-2" role="button" tabindex="0">
+                        <span>Is this tool free to use?</span>
+                        <span class="transform group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Yes! This Pinterest title generator is completely free with no sign-up required. Generate as many titles as you want for different keywords and topics. Your search history is saved locally on your device for quick access to previous searches.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- Related Tools Section -->
+        <section class="bg-gradient-to-r from-pink-100 to-purple-100 rounded-lg p-6 sm:p-8 mb-12" aria-labelledby="related-tools-heading">
+            <h2 id="related-tools-heading" class="text-2xl font-bold text-gray-900 mb-4">
+                More Free Pinterest Tools
+            </h2>
+            <p class="text-gray-700 mb-6">
+                Complement your title generator with these related tools to optimize your entire Pinterest strategy:
+            </p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="#" class="bg-white p-4 rounded-lg hover:shadow-md transition-smooth border-l-4 border-pink-600">
+                    <h3 class="font-semibold text-gray-900 mb-2">📝 Pin Description Optimizer</h3>
+                    <p class="text-sm text-gray-600">Generate SEO-optimized descriptions that drive clicks and saves.</p>
+                </a>
+                <a href="#" class="bg-white p-4 rounded-lg hover:shadow-md transition-smooth border-l-4 border-pink-600">
+                    <h3 class="font-semibold text-gray-900 mb-2">#️⃣ Pinterest Hashtag Generator</h3>
+                    <p class="text-sm text-gray-600">Create trending hashtags to boost pin visibility and reach.</p>
+                </a>
+                <a href="#" class="bg-white p-4 rounded-lg hover:shadow-md transition-smooth border-l-4 border-pink-600">
+                    <h3 class="font-semibold text-gray-900 mb-2">📊 Pin Performance Analyzer</h3>
+                    <p class="text-sm text-gray-600">Track and analyze your best-performing pins to optimize future content.</p>
+                </a>
+                <a href="#" class="bg-white p-4 rounded-lg hover:shadow-md transition-smooth border-l-4 border-pink-600">
+                    <h3 class="font-semibold text-gray-900 mb-2">🎯 Keyword Research Tool</h3>
+                    <p class="text-sm text-gray-600">Find high-volume, low-competition Pinterest keywords for your niche.</p>
+                </a>
+                <a href="#" class="bg-white p-4 rounded-lg hover:shadow-md transition-smooth border-l-4 border-pink-600">
+                    <h3 class="font-semibold text-gray-900 mb-2">📅 Content Calendar Template</h3>
+                    <p class="text-sm text-gray-600">Plan your Pinterest strategy with customizable content calendars.</p>
+                </a>
+                <a href="#" class="bg-white p-4 rounded-lg hover:shadow-md transition-smooth border-l-4 border-pink-600">
+                    <h3 class="font-semibold text-gray-900 mb-2">🔗 URL Shortener for Pins</h3>
+                    <p class="text-sm text-gray-600">Shorten links with custom branding for better click tracking.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Affiliate / CTA Section -->
+        <section class="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg p-8 mb-12 text-center shadow-lg">
+            <h2 class="text-2xl font-bold mb-4">
+                Level Up Your Pinterest Game
+            </h2>
+            <p class="text-lg mb-6 opacity-95">
+                Create stunning pins with Canva Pro and track performance with Tailwind. Both tools integrate seamlessly with Pinterest.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                    href="https://go.track.canva.com/?utm_medium=partner" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="inline-block bg-white text-pink-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-smooth"
+                >
+                    → Try Canva Pro
+                </a>
+                <a 
+                    href="https://www.tailwindapp.com/p/go/p/25599" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="inline-block bg-white text-pink-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-smooth"
+                >
+                    → Explore Tailwind
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white font-bold mb-4">Pinterest Tools</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-pink-400 transition">Title Generator</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Description Optimizer</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Hashtag Generator</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">SEO Checker</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-pink-400 transition">Pinterest Blog</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Creator Hub</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Best Practices</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Company</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-pink-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Follow Us</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-pink-400 transition">Pinterest</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Instagram</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Twitter</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2024 Pinterest Title Generator. All rights reserved. | 
+                    <a href="#" class="hover:text-pink-400 transition">Privacy</a> • 
+                    <a href="#" class="hover:text-pink-400 transition">Terms</a> • 
+                    <a href="#" class="hover:text-pink-400 transition">Affiliate Disclosure</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // ============================================================
+        // TITLE GENERATION DATA & TEMPLATES
+        // ============================================================
+        
+        /**
+         * Title generation templates organized by tone and structure
+         * Each contains placeholders for {keyword} and {number}
+         */
+        const titleTemplates = {
+            motivational: [
+                "{number} {keyword} Ideas That Will Inspire You",
+                "The {keyword} Guide Everyone Needs",
+                "Transform Your Life With These {number} {keyword} Hacks",
+                "Why {number} {keyword} Tips Changed Everything",
+                "{number} Proven {keyword} Strategies That Actually Work",
+                "The Ultimate {keyword} Blueprint for Success",
+                "How to Master {keyword} in {number} Days",
+                "The {number} Most Powerful {keyword} Techniques",
+                "Finally! The {keyword} Secret Everyone's Talking About",
+                "Unlock Your Best {keyword} Life With These {number} Ideas",
+                "{number} Game-Changing {keyword} Secrets",
+                "The {keyword} Mindset Shift You Need Right Now",
+                "Discover {number} Life-Changing {keyword} Hacks",
+                "Master {keyword} With This {number}-Step System",
+                "{number} {keyword} Breakthroughs You Need to Know"
+            ],
+            practical: [
+                "How to {keyword}: A Step-by-Step Guide",
+                "{number} Easy {keyword} Tips for Beginners",
+                "The Complete {keyword} Checklist ({number} Steps)",
+                "DIY {keyword}: {number} Methods That Work",
+                "{number} Quick {keyword} Hacks You Can Try Today",
+                "The {keyword} Basics Everyone Should Know",
+                "Easy {keyword}: {number} Simple Steps",
+                "{number} {keyword} Tools That Actually Help",
+                "Quick {keyword} Solutions for {number} Common Problems",
+                "Learn {keyword} in {number} Minutes",
+                "{number} Budget {keyword} Tutorials for Beginners",
+                "The {keyword} How-To Guide (No Experience Needed)",
+                "{number} Tested {keyword} Methods That Work",
+                "Start {keyword} Today: {number} Beginner Tips",
+                "The {keyword} Starter Pack: {number} Essentials"
+            ],
+            trending: [
+                "Everyone's Obsessed With {keyword}: Here's Why",
+                "{number} {keyword} Trends Taking Over Now",
+                "The {keyword} Phenomenon: What You Need to Know",
+                "Why {number} People Are Doing {keyword}",
+                "{keyword} is Trending—Here's Everything About It",
+                "The {number} Hottest {keyword} Ideas Right Now",
+                "{keyword}: The Trend That's Everywhere",
+                "{number} Viral {keyword} Hacks That's Going Crazy",
+                "This {keyword} Trend is Blowing Up—Here's Why",
+                "The {keyword} Craze: {number} Things to Know",
+                "Everyone's Talking About {keyword}: {number} Reasons Why",
+                "The {number} Most Viral {keyword} Trends",
+                "{keyword}: {number} Trending Ideas for 2024",
+                "What's Everyone Doing With {keyword}? {number} Ideas",
+                "The {keyword} Viral Moment: {number} Things You Missed"
+            ],
+            luxury: [
+                "Luxury {keyword}: {number} Premium Ideas",
+                "The {number} Most Elegant {keyword} Styles",
+                "High-End {keyword} for Sophisticated Tastes",
+                "Luxury Living: {number} {keyword} Essentials",
+                "The {number} Most Chic {keyword} Aesthetics",
+                "Elevated {keyword}: {number} Luxury Upgrades",
+                "Premium {keyword} Ideas for Discerning Tastes",
+                "{number} Luxury {keyword} Concepts",
+                "The Art of {keyword}: {number} Refined Ideas",
+                "Timeless {keyword}: {number} Classic Elegance Ideas",
+                "{number} Upscale {keyword} Inspirations",
+                "Sophisticated {keyword}: {number} High-End Styles",
+                "The {number} Most Luxurious {keyword} Finds",
+                "Elegant {keyword} for the Refined Home",
+                "Premium {keyword} Inspiration: {number} Exclusive Ideas"
+            ],
+            budget: [
+                "{number} Budget {keyword} Ideas Under $50",
+                "Affordable {keyword}: {number} Money-Saving Hacks",
+                "DIY {keyword} on a Budget: {number} Ideas",
+                "{number} Cheap {keyword} Ideas That Look Expensive",
+                "Budget-Friendly {keyword}: {number} Tips",
+                "Save Money on {keyword}: {number} Proven Ways",
+                "{number} {keyword} Hacks for Tight Budgets",
+                "Frugal {keyword}: {number} Smart Spending Ideas",
+                "How to {keyword} Without Breaking the Bank",
+                "{number} Free & Cheap {keyword} Ideas",
+                "Budget {keyword}: {number} Steal-Worthy Ideas",
+                "{number} Ways to {keyword} for Less",
+                "Thrifty {keyword}: {number} Affordable Solutions",
+                "Cut Costs on {keyword}: {number} Easy Ideas",
+                "Free {keyword}: {number} No-Cost Options"
+            ]
+        };
+
+        /**
+         * Generate random number for variety
+         */
+        function getRandomNumber() {
+            const numbers = [5, 7, 9, 10, 11, 12, 15, 20, 21, 25, 30, 50, 100];
+            return numbers[Math.floor(Math.random() * numbers.length)];
+        }
+
+        /**
+         * Generate titles based on keyword and settings
+         */
+        function generateTitles(keyword, tone = 'motivational') {
+            if (!keyword.trim()) {
+                alert('Please enter a keyword first!');
+                return [];
+            }
+
+            const templates = titleTemplates[tone] || titleTemplates.motivational;
+            const titles = [];
+            const usedIndexes = new Set();
+
+            // Generate 15 unique titles
+            while (titles.length < 15) {
+                const randomIndex = Math.floor(Math.random() * templates.length);
+                
+                if (usedIndexes.has(randomIndex)) {
+                    continue;
+                }
+                
+                usedIndexes.add(randomIndex);
+                const template = templates[randomIndex];
+                const number = getRandomNumber();
+                
+                // Replace placeholders with actual values
+                const title = template
+                    .replace(/{keyword}/g, keyword)
+                    .replace(/{number}/g, number);
+
+                titles.push(title);
+            }
+
+            return titles;
+        }
+
+        /**
+         * Save to localStorage for history
+         */
+        function saveToHistory(keyword) {
+            let history = JSON.parse(localStorage.getItem('pinterestTitleHistory') || '[]');
+            
+            // Remove duplicate if exists
+            history = history.filter(item => item !== keyword);
+            
+            // Add to beginning
+            history.unshift(keyword);
+            
+            // Keep only last 10 searches
+            history = history.slice(0, 10);
+            
+            localStorage.setItem('pinterestTitleHistory', JSON.stringify(history));
+        }
+
+        /**
+         * Load history from localStorage
+         */
+        function loadHistory() {
+            return JSON.parse(localStorage.getItem('pinterestTitleHistory') || '[]');
+        }
+
+        /**
+         * Copy text to clipboard with feedback
+         */
+        async function copyToClipboard(text, button) {
+            try {
+                await navigator.clipboard.writeText(text);
+                
+                const originalText = button.textContent;
+                button.textContent = '✓ Copied!';
+                button.classList.add('copy-success');
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('copy-success');
+                }, 2000);
+            } catch (err) {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                button.textContent = '✓ Copied!';
+                setTimeout(() => {
+                    button.textContent = '📋 Copy';
+                }, 2000);
+            }
+        }
+
+        // ============================================================
+        // UI INTERACTION LOGIC
+        // ============================================================
+
+        // Cache DOM elements
+        const keywordInput = document.getElementById('keyword-input');
+        const toneSelect = document.getElementById('tone-select');
+        const generateBtn = document.getElementById('generate-btn');
+        const resultsSection = document.getElementById('results-section');
+        const titlesContainer = document.getElementById('titles-container');
+        const copyAllBtn = document.getElementById('copy-all-btn');
+        const regenerateBtn = document.getElementById('regenerate-btn');
+        const clearBtn = document.getElementById('clear-btn');
+        const tryAnotherBtn = document.getElementById('try-another-btn');
+        const historyContainer = document.getElementById('history-container');
+        const btnText = document.getElementById('btn-text');
+        const loadingSpinner = document.getElementById('loading-spinner');
+
+        let currentTitles = [];
+        let currentKeyword = '';
+
+        /**
+         * Display generated titles
+         */
+        function displayTitles(titles) {
+            titlesContainer.innerHTML = '';
+            currentTitles = titles;
+
+            titles.forEach((title, index) => {
+                const titleCard = document.createElement('div');
+                titleCard.className = 'bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-lg p-3 fade-in';
+                titleCard.setAttribute('data-title-index', index);
+
+                titleCard.innerHTML = `
+                    <div class="flex gap-3">
+                        <div class="flex-1 min-w-0">
+                            <p class="font-semibold text-gray-900 text-sm sm:text-base leading-snug break-words">
+                                ${title}
+                            </p>
+                            <p class="text-xs text-gray-500 mt-2">
+                                📊 ${title.length} characters
+                            </p>
+                        </div>
+                        <button
+                            class="copy-title-btn flex-shrink-0 bg-pink-600 hover:bg-pink-700 text-white px-3 py-2 rounded transition-smooth text-sm font-semibold whitespace-nowrap"
+                            data-title="${title}"
+                            aria-label="Copy this title"
+                        >
+                            📋
+                        </button>
+                    </div>
+                `;
+
+                titlesContainer.appendChild(titleCard);
+            });
+
+            // Add event listeners to copy buttons
+            document.querySelectorAll('.copy-title-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    copyToClipboard(this.dataset.title, this);
+                });
+            });
+
+            resultsSection.classList.remove('hidden');
+        }
+
+        /**
+         * Display search history
+         */
+        function displayHistory() {
+            const history = loadHistory();
+            historyContainer.innerHTML = '';
+
+            if (history.length === 0) {
+                historyContainer.innerHTML = '<p class="text-sm text-gray-600">No recent searches yet</p>';
+                return;
+            }
+
+            history.forEach(item => {
+                const tag = document.createElement('button');
+                tag.className = 'bg-white border border-blue-300 hover:bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full transition-smooth';
+                tag.textContent = item;
+                tag.setAttribute('data-history', item);
+                
+                tag.addEventListener('click', function() {
+                    keywordInput.value = item;
+                    generateTitlesHandler();
+                });
+
+                historyContainer.appendChild(tag);
+            });
+        }
+
+        /**
+         * Main generate function
+         */
+        function generateTitlesHandler() {
+            const keyword = keywordInput.value.trim();
+            const tone = toneSelect.value;
+
+            if (!keyword) {
+                keywordInput.focus();
+                keywordInput.setAttribute('aria-invalid', 'true');
+                return;
+            }
+
+            currentKeyword = keyword;
+            keywordInput.removeAttribute('aria-invalid');
+
+            // Show loading state
+            generateBtn.disabled = true;
+            btnText.textContent = 'Generating...';
+            loadingSpinner.classList.remove('hidden');
+
+            // Simulate processing delay for better UX
+            setTimeout(() => {
+                const titles = generateTitles(keyword, tone);
+                displayTitles(titles);
+                saveToHistory(keyword);
+                displayHistory();
+
+                // Reset button state
+                generateBtn.disabled = false;
+                btnText.textContent = '✨ Generate 15 Titles';
+                loadingSpinner.classList.add('hidden');
+
+                // Scroll to results
+                resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 150);
+        }
+
+        /**
+         * Copy all titles to clipboard
+         */
+        function copyAllTitles() {
+            if (currentTitles.length === 0) return;
+
+            const allText = currentTitles.join('\n');
+            copyToClipboard(allText, copyAllBtn);
+        }
+
+        /**
+         * Regenerate titles with same keyword
+         */
+        function regenerateTitles() {
+            generateTitlesHandler();
+        }
+
+        /**
+         * Clear results
+         */
+        function clearResults() {
+            titlesContainer.innerHTML = '';
+            resultsSection.classList.add('hidden');
+            currentTitles = [];
+            currentKeyword = '';
+            keywordInput.value = '';
+            keywordInput.focus();
+        }
+
+        // ============================================================
+        // EVENT LISTENERS
+        // ============================================================
+
+        generateBtn.addEventListener('click', generateTitlesHandler);
+        keywordInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                generateTitlesHandler();
+            }
+        });
+
+        copyAllBtn.addEventListener('click', copyAllTitles);
+        regenerateBtn.addEventListener('click', regenerateTitles);
+        clearBtn.addEventListener('click', clearResults);
+        tryAnotherBtn.addEventListener('click', function() {
+            keywordInput.value = '';
+            keywordInput.focus();
+            resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+
+        // Display history on page load
+        displayHistory();
+
+        // History tag click handler
+        document.addEventListener('click', function(e) {
+            if (e.target.hasAttribute('data-history')) {
+                keywordInput.value = e.target.textContent;
+                generateTitlesHandler();
+            }
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            // Ctrl/Cmd + Enter to generate
+            if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                if (document.activeElement === keywordInput) {
+                    generateTitlesHandler();
+                }
+            }
+        });
+
+        // ============================================================
+        // ACCESSIBILITY & PROGRESSIVE ENHANCEMENT
+        // ============================================================
+
+        // Manage details element keyboard navigation
+        document.querySelectorAll('details > summary').forEach(summary => {
+            summary.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.parentElement.open = !this.parentElement.open;
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>
